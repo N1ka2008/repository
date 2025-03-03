@@ -4,6 +4,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try {
+            System.out.println("Mistnosti v 1. patre: hala, koupelna, kuchyn, jidelna, schodiste");
+            System.out.println("Mistnosti ve 2. patre: chodba, detsky pokoj, 2. detsky pokoj, loznice, schodiste");
+            System.out.println("Mistnosti ve sklepe: sklep, schodiste");
             Lokace lokace = new Lokace(".idea/soub.txt");
             Pohyb po = new Pohyb(lokace.getMistnost("hala"));
 
