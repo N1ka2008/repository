@@ -6,6 +6,10 @@ public class Pohyb {
         this.aktualniMistnost = startovniMistnost;
     }
 
+    /**
+     * Zajisti presun do hracem urcene mistnosti. Pokud mistnost neexistuje nebo nesousedi s aktualni
+     * hrac zustane v aktualni mistnosti
+     */
     public void jit(String nazev){
         for(Mistnost soused : aktualniMistnost.sousedni){
             if(soused.nazev.equals(nazev)){

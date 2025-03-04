@@ -12,6 +12,10 @@ public class Lokace {
         nacistZeSoub(soubor);
     }
 
+    /**
+     * metoda nacte mapu z textoveho souboru, rozdeli jednotlive mitnosti pomoci ";". Dale zjisti jestli
+     * mistnost existuje a jake ma sousedni mistnosti.
+     */
     private void nacistZeSoub(String file) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line;
@@ -27,7 +31,7 @@ public class Lokace {
                 if (!mistnosti.containsKey(split[i])) {
                     mistnosti.put(split[i], new Mistnost(split[i]));
                 }
-                aktualni.pridatSouseda(mistnosti.get(split[i]));
+                aktualni.pridatSousedni(mistnosti.get(split[i]));
             }
         }
         br.close();
