@@ -1,4 +1,4 @@
-public class NakrmitBailie {
+public class NakrmitBailie extends Command{
 
     public String execute(){
         return null;

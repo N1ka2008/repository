@@ -1,4 +1,4 @@
-public class Exit {
+public class Exit extends Command{
 
     public String execute(){
         return null;
