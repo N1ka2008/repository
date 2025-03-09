@@ -17,6 +17,10 @@ public class Postava extends Mistnost{
         return jeVMistnosti;
     }
 
+    public void souboj(){
+
+    }
+
     public String getJmeno() {
         return jmeno;
     }

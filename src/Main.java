@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Lokace lokace = new Lokace(".idea/soub.txt");
+
+        Hra h = new Hra();
+        /*Lokace lokace = new Lokace(".idea/soub.txt");
         Pohyb po = new Pohyb(lokace.getMistnost("hala"));
         try {
             System.out.println("Mistnosti v 1. patre: hala, koupelna, kuchyn, jidelna, schodiste");
@@ -21,10 +23,11 @@ public class Main {
             }
         } /*catch (IOException e) {
             System.out.println("Chyba při načítání souboru: ");
-            */
+            *//*
         catch (Exception e) {
             System.out.println(e);
         }
+        */
     }
 
 
