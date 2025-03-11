@@ -7,6 +7,7 @@ public class Hra {
     Pohyb po = new Pohyb(l.getMistnost("hala"));
     Konzole k = new Konzole();
     Predmet pr = new Predmet("hala");
+    Batoh b = new Batoh();
 
     public Hra() throws IOException {
     }

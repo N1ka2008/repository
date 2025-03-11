@@ -18,7 +18,9 @@ public class Postava extends Mistnost{
     }
 
     public void souboj(){
+        if(jeZaporna == true){
 
+        }
     }
 
     public String getJmeno() {
