@@ -7,11 +7,7 @@ public class Predmet extends Mistnost{
     private boolean jeVMistnosti;
     private boolean jeVzaty;
 
-    ArrayList<Predmet> premeti = new ArrayList<>();
-    public void add(Predmet p) {
-       premeti.add(p);
-        System.out.println("aaa");
-    }
+
 
     public Predmet(String nazev) throws IOException {
         super(nazev);
@@ -29,23 +25,13 @@ public class Predmet extends Mistnost{
 
     //Lokace l = new Lokace(".idea/soub.txt");
     //Pohyb po = new Pohyb(l.getMistnost("hala"));
-    Pohyb po = new Pohyb();
 
 
-   /* public void vypis(){
-        System.out.println(po.getAktualniMistnost());
-        String mit = String.valueOf(po.getAktualniMistnost());
-        for(Predmet p : premeti) {
-            if (p.nazev.equalsIgnoreCase(mit) || jeVzaty == false) {
-                System.out.println("V teto mistnosti se nachazi " + nazevPr);
-            }
-        }
-    }
 
-    */
 
     public boolean jeVMistnosti(String nazevMistnosti) {
         if(nazevMistnosti.equals(nazev) && jeVzaty == false){
+            System.out.println("Aaaaa");
             jeVMistnosti = true;
 
         }else {
@@ -55,11 +41,11 @@ public class Predmet extends Mistnost{
     }
 
     public String getNazevPr() {
-        return nazev;
+        return nazevPr;
     }
 
-    public void setNazevPr(String nazev) {
-        this.nazev = nazev;
+    public void setNazevPr(String nazevPr) {
+        this.nazevPr = nazevPr;
     }
 
     public boolean isJeVMistnosti() {

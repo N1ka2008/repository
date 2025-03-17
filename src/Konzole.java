@@ -10,10 +10,17 @@ public class Konzole {
     private HashMap<String, Command> mapa = new HashMap<>();
 
     private Pohyb po; // Přidání reference na Pohyb
+    private Predmety pr;
+    private Predmet p;
+    private Batoh b;
 
-    public Konzole(Pohyb po) throws IOException {
+    public Konzole(Pohyb po, Predmet p, Predmety pr, Batoh b) throws IOException {
         this.po = po;
+        this.p = p;
+        this.pr = pr;
+        this.b = b;
     }
+
 
     public Konzole() throws IOException {
     }
@@ -24,13 +31,9 @@ public class Konzole {
         mapa.put("Mluvit", new MluvitSpos());
         mapa.put("Nakrmit", new NakrmitBailie());
         mapa.put("Pouzit", new PouzitPredm());
-        mapa.put("Vzit", new VzitP());
+        mapa.put("Vzit", new VzitP(p, po, b));
         mapa.put("Exit", new Exit());
     }
-
-    Predmet p = new Predmet();
-
-
 
 
     private void proved(){

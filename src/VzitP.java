@@ -2,10 +2,15 @@ import java.io.IOException;
 
 public class VzitP extends Command {
 
-    Predmet p = new Predmet();
+    private Predmet p;
+    private Pohyb po;
+    private Batoh b;
 
-
-    Batoh b = new Batoh();
+    public VzitP(Predmet p, Pohyb po, Batoh b) {
+        this.p = p;
+        this.po = po;
+        this.b = b;
+    }
 
     public VzitP() throws IOException {
     }
@@ -14,13 +19,13 @@ public class VzitP extends Command {
     public boolean execute(String argument) {
             if (p.isJeVMistnosti()) {
                 b.pridatDoBatohu(p);
-
                 System.out.println("Vazali jste predmet");
             }
             return true;
     }
-        public boolean exit () {
+
+    public boolean exit () {
             return false;
-        }
+    }
 
 }

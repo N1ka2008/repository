@@ -8,18 +8,21 @@ public class Main {
         Postava p = new Postava("hala");
         Lokace l = new Lokace(".idea/soub.txt");
         Pohyb po = new Pohyb(l.getMistnost("hala"));
-
-
-        Konzole k = new Konzole(po);
-        Predmet pr = new Predmet();
+        Predmety pr = new Predmety(po);
         Predmet pacidlo = new Predmet("koupelna", "pacidlo");
         Batoh b = new Batoh();
 
         pr.add(pacidlo);
 
+
+        Konzole k = new Konzole(po, pacidlo, pr, b);
+
+
         do {
             k.start();
-            
+            pacidlo.jeVMistnosti(po.getAktualniMistnost());
+            pr.vypis();
+
         }while (k.start() == true);
 
         /*
