@@ -7,12 +7,20 @@ public class Batoh {
     public String pridatDoBatohu(Predmet p){
         predmety.add(p);
         p.setJeVzaty(true);
-        return "Predmey pridan do batohu";
+        return "Predmet pridan do batohu";
+    }
+
+    public ArrayList<Predmet> getPredmety() {
+        return predmety;
     }
 
     public void vypsatObsah(){
         for(Predmet p : predmety){
-            System.out.println(p.getNazevPr());
+            for(int i = 0; i < predmety.size(); i++) {
+                System.out.println(p.getNazevPr());
+            }
         }
     }
+
+
 }

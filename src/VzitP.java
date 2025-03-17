@@ -16,13 +16,17 @@ public class VzitP extends Command {
     }
 
 
+
     public boolean execute(String argument) {
-            if (p.isJeVMistnosti()) {
+            if (p.isJeVMistnosti() && p.getNazevPr().equalsIgnoreCase(argument)) {
                 b.pridatDoBatohu(p);
-                System.out.println("Vazali jste predmet");
+                System.out.println("Vzali jste predmet");
+            } else {
+                System.out.println("Predmet neexistuje");
             }
             return true;
     }
+
 
     public boolean exit () {
             return false;

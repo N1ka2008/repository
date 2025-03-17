@@ -18,7 +18,7 @@ public class Predmety {
         System.out.println(po.getAktualniMistnost());
         //String mit = String.valueOf(po.getAktualniMistnost());
         for(Predmet p : premeti) {
-            if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost()) || !p.isJeVzaty()) {
+            if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost()) && (!p.isJeVzaty())) {
                 System.out.println("V teto mistnosti se nachazi " + p.getNazevPr());
             }
         }
