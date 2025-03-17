@@ -1,4 +1,4 @@
-public class Command {
+public abstract class Command {
 
     protected String prikaz;
 
@@ -6,10 +6,10 @@ public class Command {
         this.prikaz = prikaz;
     }
 
-    public String execute() {
-        return null;
-    }
+
     public boolean exit() {
         return false;
     }
+
+    public abstract boolean execute(String argument);
 }

@@ -5,6 +5,10 @@ public class Pohyb {
     public Pohyb(Mistnost startovniMistnost) {
         this.aktualniMistnost = startovniMistnost;
     }
+    public Pohyb() {
+
+    }
+
 
     /**
      * Zajisti presun do hracem urcene mistnosti. Pokud mistnost neexistuje nebo nesousedi s aktualni
@@ -16,12 +20,17 @@ public class Pohyb {
                 aktualniMistnost = soused;
                 System.out.println("Aktualni mystnost: " + nazev);
                 return;
+            }else {
+                System.out.println("Do teto mistnosti nemuzes");
             }
         }
-        System.out.println("Do teto mistnosti nemuzes");
     }
 
     public String getAktualniMistnost() {
         return aktualniMistnost.nazev;
+    }
+
+    public void setAktualniMistnost(Mistnost aktualniMistnost) {
+        this.aktualniMistnost = aktualniMistnost;
     }
 }

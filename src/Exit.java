@@ -1,10 +1,10 @@
 public class Exit extends Command{
 
-    public String execute(){
-        return null;
+    public boolean execute(String arguent){
+        return false;
     }
 
     public boolean exit() {
-        return false;
+        return true;
     }
 }

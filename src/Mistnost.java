@@ -26,4 +26,8 @@ public class Mistnost {
     public void setNazev(String nazev) {
         this.nazev = nazev;
     }
+
+    public Mistnost() {
+
+    }
 }

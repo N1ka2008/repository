@@ -4,8 +4,25 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Hra h = new Hra();
-        /*Lokace lokace = new Lokace(".idea/soub.txt");
+        //Hra h = new Hra();
+        Postava p = new Postava("hala");
+        Lokace l = new Lokace(".idea/soub.txt");
+        Pohyb po = new Pohyb(l.getMistnost("hala"));
+
+
+        Konzole k = new Konzole(po);
+        Predmet pr = new Predmet();
+        Predmet pacidlo = new Predmet("koupelna", "pacidlo");
+        Batoh b = new Batoh();
+
+        pr.add(pacidlo);
+
+        do {
+            k.start();
+            
+        }while (k.start() == true);
+
+        /*
         Pohyb po = new Pohyb(lokace.getMistnost("hala"));
         try {
             System.out.println("Mistnosti v 1. patre: hala, koupelna, kuchyn, jidelna, schodiste");

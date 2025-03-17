@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 
-public class Batoh extends Konzole{
+public class Batoh {
 
     ArrayList<Predmet> predmety = new ArrayList<>();
 
     public String pridatDoBatohu(Predmet p){
         predmety.add(p);
+        p.setJeVzaty(true);
         return "Predmey pridan do batohu";
     }
 
