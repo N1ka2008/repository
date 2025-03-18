@@ -12,7 +12,7 @@ public class Main {
         Predmety pr = new Predmety(po);
         Predmet pacidlo = new Predmet("koupelna", "pacidlo");
         Postavy post = new Postavy(po);
-        Postava duch = new Postava("koupelna", "duch", "Veta.....................................   ");
+        Postava duch = new Postava("kuchyn", "duch", false, "Veta.....................................   ");
         Batoh b = new Batoh();
 
         pr.add(pacidlo);
@@ -27,7 +27,7 @@ public class Main {
             //System.out.println(pacidlo.jeVMistnosti(po.getAktualniMistnost()));
            // pr.vypis();
             System.out.println(duch.jeVMistnosti(po.getAktualniMistnost()));
-            //post.vypis();
+            post.vypis();
 
         }while (k.start() == true);
 

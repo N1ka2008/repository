@@ -10,10 +10,10 @@ public class Postava extends Mistnost{
         super(nazev);
     }
 
-    public Postava(String nazev, String jmeno, String monolog) {
+    public Postava(String nazev, String jmeno, boolean jeZaporna, String monolog) {
         super(nazev);
         this.jmeno = jmeno;
-        //this.jeZaporna = jeZaporna;
+        this.jeZaporna = jeZaporna;
         this.monolog = monolog;
     }
 

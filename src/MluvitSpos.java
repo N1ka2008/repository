@@ -9,9 +9,6 @@ public class MluvitSpos extends Command{
     }
 
     public boolean execute(String argument){
-        if(pos.isJeVMistnosti()){
-            System.out.println("lllll");
-        }
         if (pos.isJeVMistnosti() && pos.getJmeno().equalsIgnoreCase("duch")){
             System.out.println(pos.getMonolog());
         }else {
