@@ -6,7 +6,6 @@ public class Postavy {
 
     public void add(Postava p) {
         postavy.add(p);
-        System.out.println("aaaaaaaaaaaaaaaaap");
     }
 
     private Pohyb po;
@@ -16,8 +15,6 @@ public class Postavy {
     }
 
     public void vypis(){
-        System.out.println(po.getAktualniMistnost());
-        //String mit = String.valueOf(po.getAktualniMistnost());
         for(Postava p : postavy) {
             if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost())) {
                 System.out.println("V teto mistnosti se nachazi " + p.getJmeno());

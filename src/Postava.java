@@ -25,7 +25,6 @@ public class Postava extends Mistnost{
 
     public boolean jeVMistnosti(String nazevMistnosti) {
         if(nazevMistnosti.equalsIgnoreCase(nazev) && jeZaporna == false){
-            System.out.println("dede");
             setJeVMistnosti(true);
         }else {
             setJeVMistnosti(false);

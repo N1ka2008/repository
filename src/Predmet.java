@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Predmet extends Mistnost{
 
@@ -21,12 +20,6 @@ public class Predmet extends Mistnost{
     public Predmet() throws IOException {
         super(null);
     }
-
-
-    //Lokace l = new Lokace(".idea/soub.txt");
-    //Pohyb po = new Pohyb(l.getMistnost("hala"));
-
-
 
 
     public boolean jeVMistnosti(String nazevMistnosti) {
