@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class Hra {
 
-    Postava p = new Postava("hala");
+    /*Postava p = new Postava("hala");
     Lokace l = new Lokace(".idea/soub.txt");
     Pohyb po = new Pohyb(l.getMistnost("hala"));
     Konzole k = new Konzole();
@@ -11,4 +11,6 @@ public class Hra {
 
     public Hra() throws IOException {
     }
+
+     */
 }

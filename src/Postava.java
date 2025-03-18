@@ -1,18 +1,34 @@
 public class Postava extends Mistnost{
 
     private String jmeno;
-    private boolean jeVMistnosti;
+    private boolean jeVMistnosti = true;
     private boolean jeZaporna;
+    private String monolog;
 
     public Postava(String nazev) {
+
         super(nazev);
     }
 
+    public Postava(String nazev, String jmeno, String monolog) {
+        super(nazev);
+        this.jmeno = jmeno;
+        //this.jeZaporna = jeZaporna;
+        this.monolog = monolog;
+    }
+
+    public Postava(String nazev, String jmeno, boolean jeZaporna) {
+        super(nazev);
+        this.jmeno = jmeno;
+        this.jeZaporna = jeZaporna;
+    }
+
     public boolean jeVMistnosti(String nazevMistnosti) {
-        if(nazevMistnosti.equals(nazev)){
-            jeVMistnosti = true;
+        if(nazevMistnosti.equalsIgnoreCase(nazev) && jeZaporna == false){
+            System.out.println("dede");
+            setJeVMistnosti(true);
         }else {
-            jeVMistnosti = false;
+            setJeVMistnosti(false);
         }
         return jeVMistnosti;
     }
@@ -45,5 +61,13 @@ public class Postava extends Mistnost{
 
     public void setJeZaporna(boolean jeZaporna) {
         this.jeZaporna = jeZaporna;
+    }
+
+    public String getMonolog() {
+        return monolog;
+    }
+
+    public void setMonolog(String monolog) {
+        this.monolog = monolog;
     }
 }
