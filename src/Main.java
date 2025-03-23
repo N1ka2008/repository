@@ -15,19 +15,28 @@ public class Main {
         Postava duch = new Postava("kuchyn", "duch", false, "Veta.....................................   ");
         Batoh b = new Batoh();
 
+
         pr.add(pacidlo);
         post.add(duch);
 
+        AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pacidlo);
 
-        Konzole k = new Konzole(po, pacidlo, pr, b, post, duch);
+
+
+
+        Konzole k = new Konzole(po, pacidlo, pr, b, post, duch, bedna);
 
 
         do {
             k.start();
             System.out.println(pacidlo.jeVMistnosti(po.getAktualniMistnost()));
             pr.vypis();
-            System.out.println(duch.jeVMistnosti(po.getAktualniMistnost()));
-            post.vypis();
+            bedna.bedna();
+            //pac.bedna();
+
+            //System.out.println(duch.jeVMistnosti(po.getAktualniMistnost()));
+            //post.vypis();
+
 
         }while (k.start() == true);
 

@@ -15,14 +15,18 @@ public class Konzole {
     private Batoh b;
     private Postavy post;
     private Postava pos;
+    private AplikacePouzitiPredmetu pouz;
 
-    public Konzole(Pohyb po, Predmet p, Predmety pr, Batoh b, Postavy post, Postava pos) throws IOException {
+    //private PouzitiPacidla pou;
+
+    public Konzole(Pohyb po, Predmet p, Predmety pr, Batoh b, Postavy post, Postava pos, AplikacePouzitiPredmetu pouz) throws IOException {
         this.po = po;
         this.p = p;
         this.pr = pr;
         this.b = b;
         this.post = post;
         this.pos = pos;
+        this.pouz = pouz;
     }
 
 
@@ -34,7 +38,7 @@ public class Konzole {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(pos, po));
         mapa.put("Nakrmit", new NakrmitBailie(pos, b));
-        mapa.put("Pouzit", new PouzitPredm(p, b));
+        mapa.put("Pouzit", new PouzitPredm(p, b, pouz));
         mapa.put("Vzit", new VzitP(p, po, b));
         mapa.put("Exit", new Exit());
         mapa.put("Zobrazit", new ZobrazitBatoh(b));
