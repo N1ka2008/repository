@@ -40,7 +40,7 @@ public class Konzole {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(pos, po));
         mapa.put("Nakrmit", new NakrmitBailie(pos, b));
-        mapa.put("Pouzit", new PouzitPredm(pr, b, pouz));
+        mapa.put("Pouzit", new PouzitPredm(pr, b, pouz, post));
         mapa.put("Vzit", new VzitP(pr, po, b));
         mapa.put("Exit", new Exit());
         mapa.put("Zobrazit", new ZobrazitBatoh(b));

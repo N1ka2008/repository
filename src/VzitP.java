@@ -17,7 +17,7 @@ public class VzitP extends Command {
 
 
     public boolean execute(String argument) {
-        for(Predmet pe : p.premeti) {
+        /*for(Predmet pe : p.premeti) {
             if (pe.isJeVMistnosti() && pe.getNazevPr().equalsIgnoreCase(argument)) {
                 b.pridatDoBatohu(pe);
                 System.out.println("Vzali jste predmet");
@@ -25,12 +25,32 @@ public class VzitP extends Command {
                 System.out.println("Predmet neexistuje");
             }
         }
-            return true;
+
+         */
+        boolean predmetNalezen = false;
+        for (Predmet pe : p.premeti) {
+            if (pe.getNazevPr().equalsIgnoreCase(argument)) {
+                if (pe.isJeVMistnosti()) {
+                    b.pridatDoBatohu(pe);
+                    System.out.println("Vzali jste predmet: " + pe.getNazevPr());
+                    predmetNalezen = true;
+                    break;
+                } else {
+                    System.out.println("Predmet " + pe.getNazevPr() + " neni v mistnosti");
+                    predmetNalezen = true;
+                }
+            }
+        }
+        if (!predmetNalezen) {
+            System.out.println("Takovy predmet neexistuje");
+        }
+
+        return true;
+
+
     }
-
-
-    public boolean exit () {
+        public boolean exit () {
             return false;
-    }
+        }
 
 }

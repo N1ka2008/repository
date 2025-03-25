@@ -31,7 +31,7 @@ public class Main {
         post.add(bailie);
         post.add(james);
 
-        AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pr);
+        AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pr, b, post);
 
 
 
@@ -50,10 +50,12 @@ public class Main {
 
             bedna.bedna();
 
-            duch.jeVMistnosti(po.getAktualniMistnost());
+            /*duch.jeVMistnosti(po.getAktualniMistnost());
             bailie.jeVMistnosti(po.getAktualniMistnost());
             james.jeVMistnosti(po.getAktualniMistnost());
             post.vypis();
+
+             */
 
 
 
