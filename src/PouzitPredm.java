@@ -47,6 +47,7 @@ public class PouzitPredm extends Command{
                     System.out.println(pac.pouzitFotoaparat());
                     pac.pouzitiKlice1();
                     pac.pouzitiKlice2();
+                    System.out.println(pac.pouzitiPsihoKrm());
                 } else {
                     System.out.println("Tento predmet nemate");
                 }

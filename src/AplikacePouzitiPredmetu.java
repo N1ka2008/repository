@@ -19,11 +19,11 @@ public class AplikacePouzitiPredmetu {
         this.nachaziSe = nachaziSe;
         this.po = po;
         this.b = b;
+        this.post = post;
         this.pouz = new PouzitPredm(p, b, this, post);
         //this.nakr = new NakrmitBailie(p);
         //this.ji = new JitDoMistn(po);
     }
-
 
 
     public boolean bedna(){
