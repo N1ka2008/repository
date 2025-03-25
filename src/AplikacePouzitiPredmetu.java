@@ -15,10 +15,17 @@ public class AplikacePouzitiPredmetu {
 
     //private JitDoMistn ji;
 
+    public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmety p) {
+        this.nachaziSe = nachaziSe;
+        this.po = po;
+        //this.b = b;
+        this.pouz = new PouzitPredm(p);
+        //this.nakr = new NakrmitBailie(p);
+        //this.ji = new JitDoMistn(po);
+    }
 
 
-
-    public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmet p, Postava post) {
+    public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmety p, Postava post) {
         this.nachaziSe = nachaziSe;
         this.po = po;
         //this.b = b;
@@ -61,7 +68,7 @@ public class AplikacePouzitiPredmetu {
     }
 
     public void pouzitiKlice1(){
-        if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
+        if(pouz.execute("Pouzit klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
             po.jit("1 tajna mistnost");
         }
     }

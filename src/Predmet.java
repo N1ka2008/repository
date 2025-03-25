@@ -4,7 +4,7 @@ public class Predmet extends Mistnost{
 
     private String nazevPr;
     private boolean jeVMistnosti;
-    private boolean jeVzaty;
+    private boolean jeVzaty = false;
 
 
 

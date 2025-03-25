@@ -10,6 +10,7 @@ public class Konzole {
     private HashMap<String, Command> mapa = new HashMap<>();
 
     private Pohyb po;
+    //private Predmet klic1;
     private Predmety pr;
     private Predmet p;
     private Batoh b;
@@ -19,9 +20,10 @@ public class Konzole {
 
     //private PouzitiPacidla pou;
 
-    public Konzole(Pohyb po, Predmet p, Predmety pr, Batoh b, Postavy post, Postava pos, AplikacePouzitiPredmetu pouz) throws IOException {
+    public Konzole(Pohyb po, Predmety pr, Batoh b, Postavy post, AplikacePouzitiPredmetu pouz) throws IOException {
         this.po = po;
         this.p = p;
+        //this.klic1 = klic1;
         this.pr = pr;
         this.b = b;
         this.post = post;
@@ -30,7 +32,7 @@ public class Konzole {
     }
 
 
-    public Konzole() throws IOException {
+    public Konzole(Pohyb po, Predmet pacidlo, Predmety pr, Batoh b, Postavy post, Postava duch, Postava bailie, Postava james, AplikacePouzitiPredmetu bedna) throws IOException {
     }
 
 
@@ -38,8 +40,8 @@ public class Konzole {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(pos, po));
         mapa.put("Nakrmit", new NakrmitBailie(pos, b));
-        mapa.put("Pouzit", new PouzitPredm(p, b, pouz));
-        mapa.put("Vzit", new VzitP(p, po, b));
+        mapa.put("Pouzit", new PouzitPredm(pr, b, pouz));
+        mapa.put("Vzit", new VzitP(pr, po, b));
         mapa.put("Exit", new Exit());
         mapa.put("Zobrazit", new ZobrazitBatoh(b));
     }

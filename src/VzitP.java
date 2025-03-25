@@ -2,11 +2,11 @@ import java.io.IOException;
 
 public class VzitP extends Command {
 
-    private Predmet p;
+    private Predmety p;
     private Pohyb po;
     private Batoh b;
 
-    public VzitP(Predmet p, Pohyb po, Batoh b) {
+    public VzitP(Predmety p, Pohyb po, Batoh b) {
         this.p = p;
         this.po = po;
         this.b = b;
@@ -16,14 +16,15 @@ public class VzitP extends Command {
     }
 
 
-
     public boolean execute(String argument) {
-            if (p.isJeVMistnosti() && p.getNazevPr().equalsIgnoreCase(argument)) {
-                b.pridatDoBatohu(p);
+        for(Predmet pe : p.premeti) {
+            if (pe.isJeVMistnosti() && pe.getNazevPr().equalsIgnoreCase(argument)) {
+                b.pridatDoBatohu(pe);
                 System.out.println("Vzali jste predmet");
-            } else {
+            } else if(!(pe.isJeVMistnosti()) && !(pe.getNazevPr().equalsIgnoreCase(argument))){
                 System.out.println("Predmet neexistuje");
             }
+        }
             return true;
     }
 
