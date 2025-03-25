@@ -18,10 +18,14 @@ public class PouzitPredm extends Command{
     public boolean execute(String argument){
         if(b.predmety.contains(p) && p.getNazevPr().equalsIgnoreCase(argument)){
             System.out.println("Predmet pouzit");
-            b.predmety.remove(p);
+            //b.predmety.remove(p);
             if(pac.bedna() == true){
                 pac.pouzitPac();
             }
+            pac.pouzitFotoaparat();
+            pac.pouzitiKlice1();
+            pac.pouzitiKlice2();
+            pac.pouzitiPsihoKrm();
         }else{
             System.out.println("tento predmet nemate");
         }

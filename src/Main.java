@@ -19,7 +19,7 @@ public class Main {
         pr.add(pacidlo);
         post.add(duch);
 
-        AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pacidlo);
+        AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pacidlo, duch);
 
 
 

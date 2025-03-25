@@ -3,6 +3,7 @@ public class Postava extends Mistnost{
     private String jmeno;
     private boolean jeVMistnosti = true;
     private boolean jeZaporna;
+    private boolean jeOchocena;
     private String monolog;
 
     public Postava(String nazev) {
@@ -21,6 +22,13 @@ public class Postava extends Mistnost{
         super(nazev);
         this.jmeno = jmeno;
         this.jeZaporna = jeZaporna;
+    }
+
+    public Postava(String nazev, String jmeno, boolean jeZaporna, boolean jeOchocena) {
+        super(nazev);
+        this.jmeno = jmeno;
+        this.jeZaporna = jeZaporna;
+        this.jeOchocena = jeOchocena;
     }
 
     public boolean jeVMistnosti(String nazevMistnosti) {
@@ -68,5 +76,13 @@ public class Postava extends Mistnost{
 
     public void setMonolog(String monolog) {
         this.monolog = monolog;
+    }
+
+    public boolean isJeOchocena() {
+        return jeOchocena;
+    }
+
+    public void setJeOchocena(boolean jeOchocena) {
+        this.jeOchocena = jeOchocena;
     }
 }

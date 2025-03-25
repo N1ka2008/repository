@@ -7,15 +7,25 @@ public class AplikacePouzitiPredmetu {
 
     private PouzitPredm pouz;
 
-   // private Predmet p;
+    private Postava post;
+
+    private Mistnost m;
+
+    //private NakrmitBailie nakr;
+
+    //private JitDoMistn ji;
 
 
 
-    public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmet p) {
+
+    public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmet p, Postava post) {
         this.nachaziSe = nachaziSe;
         this.po = po;
         //this.b = b;
         this.pouz = new PouzitPredm(p);
+        this.post = post;
+        //this.nakr = new NakrmitBailie(p);
+        //this.ji = new JitDoMistn(po);
     }
 
     public boolean bedna(){
@@ -29,16 +39,42 @@ public class AplikacePouzitiPredmetu {
     }
 
 
+    public String pouzitPac(){
+        if(pouz.execute("Pouzit pacidlo")) {
+            return "V bedne jsi nasel fotku rodiny";
+        }
+        return null;
+    }
+
+    public String pouzitFotoaparat(){
+        if(pouz.execute("Pouzit fotoaparat")) {
+           return "Poridil jsi fotografii";
+        }
+        return null;
+    }
+
+    public String pouzitiPsihoKrm(){
+        if(post.isJeOchocena() == true && po.getAktualniMistnost().equalsIgnoreCase("sklep")){
+            return "Vidis Bailie skrabat na stenu, mozna se tam skryva dalsi tajna mistnost";
+        }
+        return null;
+    }
+
+    public void pouzitiKlice1(){
+        if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
+            po.jit("1 tajna mistnost");
+        }
+    }
+
+    public void pouzitiKlice2(){
+        if(pouz.execute("Pouzit 2. klic") && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
+            po.jit("2 tajna mistnost");
+        }
+    }
 
     private Batoh b;
 
 
 
-    public void pouzitPac(){
-        if(pouz.execute("Pouzit pacidlo")) {
-            System.out.println("V bedne jsi nasel fotku rodiny");
-        }
-
-    }
 
 }

@@ -16,12 +16,18 @@ public class NakrmitBailie extends Command{
         this.hledanyPredmet = "psi krmeni";
     }
 
+    public NakrmitBailie(Predmet p) {
+        super();
+    }
+
     public boolean execute(String argument) {
         for (Predmet p : b.getPredmety()) {
             if (p.getNazev().equals(hledanyPredmet) && pos.getJmeno().equalsIgnoreCase("Bailie")) {
                 System.out.println("ochocil jsi si Bailie");
+                pos.setJeOchocena(true);
+                System.out.println("Bailie te vede do sklepa nasleduj ji");
             } else {
-                System.out.println("Musis njit psi krmeni");
+                System.out.println("Musis najit psi krmeni");
             }
         }
             return true;
