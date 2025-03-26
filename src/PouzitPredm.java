@@ -18,36 +18,26 @@ public class PouzitPredm extends Command{
     }
 
     public boolean execute(String argument){
-
-       /* for(Predmet pe : p.premeti) {
-            if (b.predmety.contains(pe) && pe.getNazevPr().equalsIgnoreCase(argument)) {
-                System.out.println("Predmet pouzit");
-                //b.predmety.remove(p);
-                if (pac.bedna() == true) {
-                    pac.pouzitPac();
-                }
-                //pac.pouzitFotoaparat();
-                //pac.pouzitiKlice1();
-                //pac.pouzitiKlice2();
-                //pac.pouzitiPsihoKrm();
-            } else if (!(b.predmety.contains(pe)) && !(pe.getNazevPr().equalsIgnoreCase(argument))) {
-                System.out.println("tento predmet nemate");
-            }
-        }
-
-        */
-
         for (Predmet pe : p.premeti) {
             if (pe.getNazevPr().equalsIgnoreCase(argument)) {
                 if (b.getPredmety().stream().anyMatch(item -> item.getNazevPr().equalsIgnoreCase(argument))) {
                     System.out.println("Predmet pouzit: " + pe.getNazevPr());
                     if (pac.bedna() == true) {
-                        System.out.println(pac.pouzitPac());
+                        Boolean pacResult = pac.pouzitPac();
+                        if (pacResult != false) {
+                            System.out.println(pacResult);
+                        }
                     }
-                    System.out.println(pac.pouzitFotoaparat());
+                    Boolean fotoResult = pac.pouzitFotoaparat();
+                    if (fotoResult != false) {
+                        System.out.println(fotoResult);
+                    }
                     pac.pouzitiKlice1();
                     pac.pouzitiKlice2();
-                    System.out.println(pac.pouzitiPsihoKrm());
+                    Boolean krmResult = pac.pouzitiPsihoKrm();
+                    if(krmResult != false){
+                        System.out.println(krmResult);
+                    }
                 } else {
                     System.out.println("Tento predmet nemate");
                 }

@@ -17,16 +17,6 @@ public class VzitP extends Command {
 
 
     public boolean execute(String argument) {
-        /*for(Predmet pe : p.premeti) {
-            if (pe.isJeVMistnosti() && pe.getNazevPr().equalsIgnoreCase(argument)) {
-                b.pridatDoBatohu(pe);
-                System.out.println("Vzali jste predmet");
-            } else if(!(pe.isJeVMistnosti()) && !(pe.getNazevPr().equalsIgnoreCase(argument))){
-                System.out.println("Predmet neexistuje");
-            }
-        }
-
-         */
         boolean predmetNalezen = false;
         for (Predmet pe : p.premeti) {
             if (pe.getNazevPr().equalsIgnoreCase(argument)) {

@@ -6,8 +6,8 @@
 2;chodba;detsky pokoj;2 detsky pokoj;schodiste;loznice
 2;detsky pokoj;chodba
 2;loznice;schodiste;chodba
-2;1 tajna mistnost;loznice
-2;2 detsky pokoj;chodba
+2;1. tajna mistnost;loznice
+2;2. detsky pokoj;chodba
 2;schodiste;hala;loznice
 sklep;sklep;schodiste
 sklep;2 tajna mistnost;sklep
