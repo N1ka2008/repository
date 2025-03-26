@@ -38,7 +38,7 @@ public class Konzole {
 
     public void inicializace() throws IOException {
         mapa.put("Jit", new JitDoMistn(po));
-        mapa.put("Mluvit", new MluvitSpos(pos, po));
+        mapa.put("Mluvit", new MluvitSpos(post, po));
         mapa.put("Nakrmit", new NakrmitBailie(pos, b));
         mapa.put("Pouzit", new PouzitPredm(pr, b, pouz, post));
         mapa.put("Vzit", new VzitP(pr, po, b));

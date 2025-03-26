@@ -49,12 +49,11 @@ public class Main {
 
                 bedna.bedna();
 
-            /*duch.jeVMistnosti(po.getAktualniMistnost());
+            duch.jeVMistnosti(po.getAktualniMistnost());
             bailie.jeVMistnosti(po.getAktualniMistnost());
             james.jeVMistnosti(po.getAktualniMistnost());
             post.vypis();
 
-             */
 
 
             } while (k.start() == true);

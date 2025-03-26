@@ -1,4 +1,4 @@
-public class PouzitPredm extends Command{
+public class PouzitPredm extends Command {
 
     private Predmety p;
     private Batoh b;
@@ -17,36 +17,44 @@ public class PouzitPredm extends Command{
         //this.b = b;
     }
 
-    public boolean execute(String argument){
+    public boolean execute(String argument) {
+
         for (Predmet pe : p.premeti) {
             if (pe.getNazevPr().equalsIgnoreCase(argument)) {
                 if (b.getPredmety().stream().anyMatch(item -> item.getNazevPr().equalsIgnoreCase(argument))) {
                     System.out.println("Predmet pouzit: " + pe.getNazevPr());
-                    if (pac.bedna() == true) {
-                        Boolean pacResult = pac.pouzitPac();
-                        if (pacResult != false) {
-                            System.out.println(pacResult);
-                        }
-                    }
-                    Boolean fotoResult = pac.pouzitFotoaparat();
-                    if (fotoResult != false) {
-                        System.out.println(fotoResult);
-                    }
-                    pac.pouzitiKlice1();
-                    pac.pouzitiKlice2();
-                    Boolean krmResult = pac.pouzitiPsihoKrm();
-                    if(krmResult != false){
-                        System.out.println(krmResult);
+                    switch (argument.toLowerCase()) {
+                        case "pacidlo":
+                            if (pac.bedna() == true) {
+                                System.out.println(pac.pouzitPac());
+                            }
+                            break;
+                        case "fotoaparat":
+                            System.out.println(pac.pouzitFotoaparat());
+                            break;
+                        case "1. klic":
+                            pac.pouzitiKlice1();
+                        break;
+
+                        case "2. klic":
+                            pac.pouzitiKlice2();
+                        break;
+                        case "psi krmivo":
+                            System.out.println(pac.pouzitiPsihoKrm());
+                            break;
                     }
                 } else {
                     System.out.println("Tento predmet nemate");
                 }
+
             }
         }
-        return true;
-    }
+            return true;
 
-    public boolean exit() {
-        return false;
     }
+            public boolean exit () {
+                return false;
+            }
+
+
 }
