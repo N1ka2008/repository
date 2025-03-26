@@ -4,9 +4,10 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        //Hra h = new Hra();
+        Hra h = new Hra();
+        h.hra();
 
-        try {
+        /*try {
 
             Lokace l = new Lokace(".idea/soub.txt");
             Pohyb po = new Pohyb(l.getMistnost("hala"));
@@ -60,6 +61,8 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
+
+         */
 
     }
 

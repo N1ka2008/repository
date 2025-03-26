@@ -3,6 +3,8 @@ public class AplikacePouzitiPredmetu {
 
     private String nachaziSe;
 
+    private boolean jeBednaOtevrena = false;
+
     private Pohyb po;
 
     private PouzitPredm pouz;
@@ -24,7 +26,7 @@ public class AplikacePouzitiPredmetu {
 
 
     public boolean bedna(){
-        if(nachaziSe.equalsIgnoreCase(po.getAktualniMistnost())){
+        if(nachaziSe.equalsIgnoreCase(po.getAktualniMistnost()) && !isJeBednaOtevrena()){
             System.out.println("V teto mistnosti vidis bednu s pribitym vikem");
             return true;
         } else {
@@ -34,6 +36,7 @@ public class AplikacePouzitiPredmetu {
 
 
     public String pouzitPac(){
+        setJeBednaOtevrena(true);
                 return "V bedne jsi nasel fotku rodiny";
     }
 
@@ -65,9 +68,11 @@ public class AplikacePouzitiPredmetu {
         }
     }
 
+    public boolean isJeBednaOtevrena() {
+        return jeBednaOtevrena;
+    }
 
-
-
-
-
+    public void setJeBednaOtevrena(boolean jeBednaOtevrena) {
+        this.jeBednaOtevrena = jeBednaOtevrena;
+    }
 }
