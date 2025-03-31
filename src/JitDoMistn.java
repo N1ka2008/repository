@@ -5,21 +5,6 @@ public class JitDoMistn extends Command {
 
     Scanner sc = new Scanner(System.in);
 
-    /*public void execute(Pohyb po){
-        System.out.println("Jsi v místnosti: " + po.getAktualniMistnost());
-        System.out.print("Kam chceš jít? ");
-        String cil = sc.nextLine();
-        po.jit(cil);
-    }
-
-     */
-
-
-
-    //Lokace l = new Lokace(".idea/soub.txt");
-
-    //Pohyb po = new Pohyb(l.getMistnost("hala"));
-
     private Pohyb po;
 
     public JitDoMistn(Pohyb po) {

@@ -14,7 +14,6 @@ public class PouzitPredm extends Command {
 
     public PouzitPredm(Predmety p) {
         this.p = p;
-        //this.b = b;
     }
 
     public boolean execute(String argument) {
@@ -39,7 +38,7 @@ public class PouzitPredm extends Command {
                         case "2. klic":
                             pac.pouzitiKlice2();
                         break;
-                        case "psi krmivo":
+                        case "psi krmeni":
                             System.out.println(pac.pouzitiPsihoKrm());
                             break;
                     }

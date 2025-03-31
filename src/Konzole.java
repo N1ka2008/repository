@@ -10,43 +10,32 @@ public class Konzole {
     private HashMap<String, Command> mapa = new HashMap<>();
 
     private Pohyb po;
-    //private Predmet klic1;
     private Predmety pr;
-    private Predmet p;
     private Batoh b;
     private Postavy post;
-    private Postava pos;
     private AplikacePouzitiPredmetu pouz;
 
-    //private PouzitiPacidla pou;
 
     public Konzole(Pohyb po, Predmety pr, Batoh b, Postavy post, AplikacePouzitiPredmetu pouz) throws IOException {
         this.po = po;
-        this.p = p;
-        //this.klic1 = klic1;
         this.pr = pr;
         this.b = b;
         this.post = post;
-        this.pos = pos;
         this.pouz = pouz;
     }
-
 
     public Konzole(Pohyb po, Predmet pacidlo, Predmety pr, Batoh b, Postavy post, Postava duch, Postava bailie, Postava james, AplikacePouzitiPredmetu bedna) throws IOException {
     }
 
-
     public void inicializace() throws IOException {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(post, po));
-        mapa.put("Nakrmit", new NakrmitBailie(pos, b));
+        mapa.put("Nakrmit", new NakrmitBailie(post, b));
         mapa.put("Pouzit", new PouzitPredm(pr, b, pouz, post));
         mapa.put("Vzit", new VzitP(pr, po, b));
         mapa.put("Exit", new Exit());
         mapa.put("Zobrazit", new ZobrazitBatoh(b));
     }
-
-
 
     private void proved(){
         System.out.println(">> ");
@@ -78,6 +67,5 @@ public class Konzole {
             return false;
         }
     }
-
 
 }
