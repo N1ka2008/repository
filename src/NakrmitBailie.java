@@ -12,7 +12,7 @@ public class NakrmitBailie extends Command{
     public NakrmitBailie(Postavy pos, Batoh b, String hledanyPredmet) {
         this.pos = pos;
         this.b = b;
-        this.hledanyPredmet = "psi krmeni";
+        this.hledanyPredmet = hledanyPredmet;
     }
 
     public NakrmitBailie(Predmet p) {

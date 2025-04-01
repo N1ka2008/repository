@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class BatohTest {
 
-    private Batoh batoh;
+    private Batoh b;
 
     @Before
     public void setUp() throws IOException {
-        batoh = new Batoh();
+        b = new Batoh();
     }
 
     @Test
@@ -17,12 +17,12 @@ public class BatohTest {
 
         Predmet pacidlo = new Predmet("koupelna", "pacidlo");
 
-        assertEquals(0, batoh.getPredmety().size());
+        assertEquals(0, b.getPredmety().size());
 
-        batoh.pridatDoBatohu(pacidlo);
+        b.pridatDoBatohu(pacidlo);
 
-        assertEquals(1, batoh.getPredmety().size());
-        assertEquals("pacidlo", batoh.getPredmety().get(0).getNazevPr());
+        assertEquals(1, b.getPredmety().size());
+        assertEquals("pacidlo", b.getPredmety().get(0).getNazevPr());
         assertTrue(pacidlo.isJeVzaty());
     }
 }

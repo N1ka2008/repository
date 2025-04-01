@@ -6,16 +6,17 @@ public class Hra {
         Lokace l = new Lokace(".idea/soub.txt");
         Pohyb po = new Pohyb(l.getMistnost("hala"));
         Predmety pr = new Predmety(po);
-        Predmet pacidlo = new Predmet("Koupelna", "pacidlo");
+        Predmet pacidlo = new Predmet("koupeln", "pacidlo");
         Predmet klic1 = new Predmet("koupeln", "1. klic");
         Predmet nuz = new Predmet("loznice", "nuz");
-        Predmet psiK = new Predmet("kuchyn", "psi krmeni");
+        Predmet psiK = new Predmet("koupelna", "psi krmeni");
         Predmet klic2 = new Predmet("2. detsky pokoj", "2. klic");
         Postavy post = new Postavy(po);
         Postava duch = new Postava("1. detsky pokoj", "duch", false, "Veta.....................................   ");
-        Postava bailie = new Postava("1. tajna mistnost", "Bailie", false, false);
+        Postava bailie = new Postava("kuchyn", "Bailie", false, false);
         Postava james = new Postava("2. tajna mistnost", "James", true, "vetaaaaaa");
         Batoh b = new Batoh();
+        String hledanyPredmet = "psi krmeni";
 
 
         pr.add(pacidlo);
@@ -30,7 +31,7 @@ public class Hra {
         AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pr, b, post, l);
 
 
-        Konzole k = new Konzole(po, pr, b, post, bedna);
+        Konzole k = new Konzole(po, pr, b, post, bedna, hledanyPredmet);
 
         System.out.println("Zacinas v mistnosti: " + po.getAktualniMistnost());
             try {
