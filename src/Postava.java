@@ -1,3 +1,7 @@
+/**
+ * Trida pro postavu
+ */
+
 public class Postava extends Mistnost{
 
     private String jmeno;
@@ -31,6 +35,9 @@ public class Postava extends Mistnost{
         this.jeOchocena = jeOchocena;
     }
 
+    /**
+     * Zjisteni jestli je postava v mistnosti
+     */
     public boolean jeVMistnosti(String nazevMistnosti) {
         if(nazevMistnosti.equalsIgnoreCase(nazev) && jeZaporna == false){
             setJeVMistnosti(true);
@@ -40,6 +47,9 @@ public class Postava extends Mistnost{
         return jeVMistnosti;
     }
 
+    /**
+     * Metoda pro souboj
+     */
     public void souboj(){
         if(jeZaporna == true){
 

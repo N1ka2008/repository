@@ -2,6 +2,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Konzole pro commands
+ */
 public class Konzole {
 
     Scanner sc = new Scanner(System.in);
@@ -29,6 +32,9 @@ public class Konzole {
     public Konzole(Pohyb po, Predmet pacidlo, Predmety pr, Batoh b, Postavy post, Postava duch, Postava bailie, Postava james, AplikacePouzitiPredmetu bedna) throws IOException {
     }
 
+    /**
+     * Metoda pro inicializaci commands
+     */
     public void inicializace() throws IOException {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(post, po));
@@ -39,6 +45,9 @@ public class Konzole {
         mapa.put("Zobrazit", new ZobrazitBatoh(b));
     }
 
+    /**
+     * Metoda pro provedeni commands
+     */
     private void proved(){
         System.out.println(">> ");
         String vstup = sc.nextLine();
@@ -59,6 +68,9 @@ public class Konzole {
         }
     }
 
+    /**
+     * Start provedeni
+     */
     public boolean start() throws IOException {
         inicializace();
         if(exit == false){

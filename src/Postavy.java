@@ -1,9 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * Trida pro arraylist postav
+ */
 public class Postavy {
 
     ArrayList<Postava> postavy = new ArrayList<>();
 
+    /**
+     * Pridani postav do arraylistu
+     */
     public void add(Postava p) {
         postavy.add(p);
     }
@@ -14,6 +20,9 @@ public class Postavy {
         this.po = po;
     }
 
+    /**
+     * Vypis postav
+     */
     public void vypis(){
         for(Postava p : postavy) {
             if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost())) {

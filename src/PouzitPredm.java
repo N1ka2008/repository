@@ -1,3 +1,6 @@
+/**
+ * Command Pouzit
+ */
 public class PouzitPredm extends Command {
 
     private Predmety p;

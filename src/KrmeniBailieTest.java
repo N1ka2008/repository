@@ -3,6 +3,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro test krmeni Bailie
+ */
 public class KrmeniBailieTest {
 
     private Lokace l;
@@ -18,6 +21,9 @@ public class KrmeniBailieTest {
         b = new Batoh();
     }
 
+    /**
+     * Test krmeni Bailie
+     */
     @Test
     public void testNakrmitBailie() throws IOException {
 

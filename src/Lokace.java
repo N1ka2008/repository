@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Trida pro zjisteni lokace
+ */
 public class Lokace {
 
     private Map<String, Mistnost> mistnosti =  new HashMap<>();

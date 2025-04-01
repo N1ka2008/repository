@@ -1,7 +1,13 @@
 import java.io.IOException;
 
+/**
+ * Trida pro logiku
+ */
 public class Hra {
 
+    /**
+     * Metoda pro spusteni hry
+     */
     public void hra() throws IOException {
         Lokace l = new Lokace(".idea/soub.txt");
         Pohyb po = new Pohyb(l.getMistnost("hala"));

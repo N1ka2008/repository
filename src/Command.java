@@ -1,3 +1,6 @@
+/**
+ * Commands
+ */
 public abstract class Command {
 
     protected String prikaz;

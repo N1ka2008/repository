@@ -2,13 +2,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Trida pro mistnosti
+ */
 public class Mistnost {
 
     String nazev;
-    /**
-     * arraylist pro mistnosti
-     */
+
     List<Mistnost> sousedni = new ArrayList<>();
 
     public Mistnost(String nazev) {

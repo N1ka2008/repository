@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Command Jit
+ */
 public class JitDoMistn extends Command {
 
     Scanner sc = new Scanner(System.in);

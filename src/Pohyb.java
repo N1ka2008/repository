@@ -1,3 +1,6 @@
+/**
+ * Trida pro pohyb
+ */
 public class Pohyb {
 
     private Mistnost aktualniMistnost;

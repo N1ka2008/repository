@@ -3,6 +3,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro test batohu
+ */
 public class BatohTest {
 
     private Batoh b;
@@ -12,6 +15,9 @@ public class BatohTest {
         b = new Batoh();
     }
 
+    /**
+     * Test pridani do batohu
+     */
     @Test
     public void testPridaniPredmetuDoBatohu() throws IOException {
 

@@ -1,12 +1,13 @@
 import java.io.IOException;
 
+/**
+ * Trida pro predmet
+ */
 public class Predmet extends Mistnost{
 
     private String nazevPr;
     private boolean jeVMistnosti;
     private boolean jeVzaty = false;
-
-
 
     public Predmet(String nazev) throws IOException {
         super(nazev);
@@ -21,7 +22,9 @@ public class Predmet extends Mistnost{
         super(null);
     }
 
-
+    /**
+     * Zjisteni jestli je predmet v mistnosti
+     */
     public boolean jeVMistnosti(String nazevMistnosti) {
         if(nazevMistnosti.equalsIgnoreCase(nazev) && jeVzaty == false){
             System.out.println("Aaaaa");

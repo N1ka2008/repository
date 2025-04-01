@@ -1,3 +1,6 @@
+/**
+ * Command Mluvit
+ */
 public class MluvitSpos extends Command{
 
     private Postavy pos;

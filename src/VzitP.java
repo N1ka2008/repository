@@ -1,5 +1,8 @@
 import java.io.IOException;
 
+/**
+ * Command Vzit
+ */
 public class VzitP extends Command {
 
     private Predmety p;

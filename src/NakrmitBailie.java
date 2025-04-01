@@ -1,3 +1,6 @@
+/**
+ * Command Nakrmit Bailie
+ */
 public class NakrmitBailie extends Command{
 
     private Postavy pos;

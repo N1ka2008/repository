@@ -1,3 +1,6 @@
+/**
+ * Trida pro kontrolu pouzivani predmetu
+ */
 public class AplikacePouzitiPredmetu {
 
 
@@ -24,7 +27,9 @@ public class AplikacePouzitiPredmetu {
         this.lo = lo;
     }
 
-
+    /**
+     * Metoda zjisti jestli je bedna v mistnosti a pripadne vypise String
+     */
     public boolean bedna(){
         if(nachaziSe.equalsIgnoreCase(po.getAktualniMistnost()) && !isJeBednaOtevrena()){
             System.out.println("V teto mistnosti vidis bednu s pribitym vikem");
@@ -34,16 +39,24 @@ public class AplikacePouzitiPredmetu {
         }
     }
 
-
+    /**
+     * Metoda pro pouziti pacidlo
+     */
     public String pouzitPac(){
         setJeBednaOtevrena(true);
                 return "V bedne jsi nasel fotku rodiny";
     }
 
+    /**
+     * Metoda pro pouziti fotoaparatu
+     */
     public String pouzitFotoaparat(){
              return "Poridil jsi fotografii";
     }
 
+    /**
+     * Metoda pro pouziti psiho krmeni
+     */
     public String pouzitiPsihoKrm(){
         for(Postava pos : post.postavy) {
             if (pos.getJmeno().equalsIgnoreCase("Bailie") && pos.isJeOchocena() == true && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
@@ -54,6 +67,9 @@ public class AplikacePouzitiPredmetu {
         return null;
     }
 
+    /**
+     * Metda pro pouziti 1. klice
+     */
     public void pouzitiKlice1(){
         if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
             po.setAktualniMistnost(lo.getMistnost("1. tajna mistnost"));
@@ -61,6 +77,9 @@ public class AplikacePouzitiPredmetu {
         }
     }
 
+    /**
+     * Metoda pro pouziti 2. klice
+     */
     public void pouzitiKlice2(){
         if(pouz.execute("Pouzit 2. klic") && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
             po.setAktualniMistnost(lo.getMistnost("2. tajna mistnost"));

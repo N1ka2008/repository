@@ -3,6 +3,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro testovani pouziti predmetu
+ */
 public class PouzitiPredmetuTest {
 
     private Lokace l;
@@ -22,6 +25,9 @@ public class PouzitiPredmetuTest {
         pouz = new AplikacePouzitiPredmetu("jidelna", po, pr, b, post, l);
     }
 
+    /**
+     * Test jestli je bedna v mistnosti
+     */
     @Test
     public void testBedna() {
         po.setAktualniMistnost(l.getMistnost("jidelna"));
@@ -29,6 +35,9 @@ public class PouzitiPredmetuTest {
         assertTrue(pouz.bedna());
     }
 
+    /**
+     * Test pouziti pacidla
+     */
     @Test
     public void testPouzitPac() {
         assertFalse(pouz.isJeBednaOtevrena());

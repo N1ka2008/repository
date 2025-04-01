@@ -1,8 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * Trida pro arraylist predmetu
+ */
 public class Predmety {
 
     ArrayList<Predmet> premeti = new ArrayList<>();
+
+    /**
+     * Pridani predmetu do arraylistu
+     */
     public void add(Predmet p) {
         premeti.add(p);
     }
@@ -13,6 +20,9 @@ public class Predmety {
         this.po = po;
     }
 
+    /**
+     * Vypis postav
+     */
     public void vypis(){
         for(Predmet p : premeti) {
             if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost()) && (!p.isJeVzaty())) {

@@ -1,3 +1,6 @@
+/**
+ * Exit command
+ */
 public class Exit extends Command{
 
     public boolean execute(String arguent){

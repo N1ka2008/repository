@@ -1,3 +1,6 @@
+/**
+ * Command Zobrazit
+ */
 public class ZobrazitBatoh extends Command{
 
     private Batoh b;
