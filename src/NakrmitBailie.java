@@ -20,7 +20,7 @@ public class NakrmitBailie extends Command{
     }
 
     public boolean execute(String argument) {
-        for(Postava post : pos.postavy) {
+       /* for(Postava post : pos.postavy) {
             for (Predmet p : b.getPredmety()) {
                 if (p.getNazev().equals(hledanyPredmet) && post.getJmeno().equalsIgnoreCase("Bailie")) {
                     System.out.println("ochocil jsi si Bailie");
@@ -30,6 +30,36 @@ public class NakrmitBailie extends Command{
                     System.out.println("Musis najit psi krmeni");
                 }
             }
+        }
+
+        */
+        boolean bailieNalezena = false;
+        boolean predmetNalezen = false;
+
+        Postava bailie = null;
+        for (Postava post : pos.postavy) {
+            if (post.getJmeno().equalsIgnoreCase("Bailie")) {
+                bailieNalezena = true;
+                bailie = post;
+                break;
+            }
+        }
+
+        if (bailieNalezena) {
+            for (Predmet p : b.getPredmety()) {
+                if (p.getNazevPr().equals(hledanyPredmet)) {
+                    System.out.println("Ochocil jsi si Bailie");
+                    bailie.setJeOchocena(true);
+                    System.out.println("Bailie te vede do sklepa nasleduj ji");
+                    predmetNalezen = true;
+                    return true;
+                }
+            }
+            if (!predmetNalezen) {
+                System.out.println("Musis najit psi krmeni");
+            }
+        } else {
+            System.out.println("Bailie neni k dispozici");
         }
             return true;
 
