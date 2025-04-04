@@ -9,7 +9,6 @@ public abstract class Command {
         this.prikaz = prikaz;
     }
 
-
     public boolean exit() {
         return false;
     }

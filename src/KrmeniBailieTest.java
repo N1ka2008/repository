@@ -37,7 +37,7 @@ public class KrmeniBailieTest {
         assertFalse(bailie.isJeOchocena());
 
 
-        NakrmitBailie nakrm = new NakrmitBailie(post, b, "psi krmeni");
+        NakrmitBailie nakrm = new NakrmitBailie(post, b);
         nakrm.execute("");
         assertTrue(bailie.isJeOchocena());
     }

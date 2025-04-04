@@ -18,7 +18,6 @@ public class JitDoMistn extends Command {
     public JitDoMistn() throws IOException {
     }
 
-
     @Override
     public boolean execute(String argument) {
         if (argument.isEmpty()) {
@@ -33,6 +32,4 @@ public class JitDoMistn extends Command {
     public boolean exit() {
         return false;
     }
-
-
 }

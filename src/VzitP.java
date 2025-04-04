@@ -18,7 +18,6 @@ public class VzitP extends Command {
     public VzitP() throws IOException {
     }
 
-
     public boolean execute(String argument) {
         boolean predmetNalezen = false;
         for (Predmet pe : p.premeti) {
@@ -40,10 +39,8 @@ public class VzitP extends Command {
 
         return true;
 
-
     }
         public boolean exit () {
             return false;
         }
-
 }

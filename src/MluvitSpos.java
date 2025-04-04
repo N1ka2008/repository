@@ -25,6 +25,4 @@ public class MluvitSpos extends Command{
     public boolean exit() {
         return false;
     }
-
-
 }

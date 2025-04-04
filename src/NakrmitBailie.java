@@ -5,17 +5,13 @@ public class NakrmitBailie extends Command{
 
     private Postavy pos;
     private Batoh b;
-    private String hledanyPredmet;
+    //private String hledanyPredmet;
+
 
     public NakrmitBailie(Postavy pos, Batoh b) {
         this.pos = pos;
         this.b = b;
-    }
-
-    public NakrmitBailie(Postavy pos, Batoh b, String hledanyPredmet) {
-        this.pos = pos;
-        this.b = b;
-        this.hledanyPredmet = hledanyPredmet;
+        //this.hledanyPredmet = hledanyPredmet;
     }
 
     public NakrmitBailie(Predmet p) {
@@ -50,7 +46,7 @@ public class NakrmitBailie extends Command{
 
         if (bailieNalezena) {
             for (Predmet p : b.getPredmety()) {
-                if (p.getNazevPr().equals(hledanyPredmet)) {
+                if (p.getNazevPr().equalsIgnoreCase("Psi krmeni")) {
                     System.out.println("Ochocil jsi si Bailie");
                     bailie.setJeOchocena(true);
                     System.out.println("Bailie te vede do sklepa nasleduj ji");
@@ -65,7 +61,6 @@ public class NakrmitBailie extends Command{
             System.out.println("Bailie neni k dispozici");
         }
             return true;
-
     }
 
     public boolean exit() {

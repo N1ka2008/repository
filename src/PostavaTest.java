@@ -11,6 +11,7 @@ public class PostavaTest {
     private Lokace l;
     private Pohyb po;
     private Postavy post;
+    private Batoh b;
 
     @Before
     public void setUp() throws IOException {
@@ -25,7 +26,7 @@ public class PostavaTest {
     @Test
     public void testPostavaVMistnosti() throws IOException {
 
-        Postava duch = new Postava("detsky pokoj", "duch", false, "vetaaaaa.....");
+        Postava duch = new Postava("detsky pokoj", "duch", false, "vetaaaaa.....", b);
         post.add(duch);
         po.setAktualniMistnost(l.getMistnost("detsky pokoj"));
         assertTrue(duch.jeVMistnosti(po.getAktualniMistnost()));

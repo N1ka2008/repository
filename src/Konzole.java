@@ -17,16 +17,16 @@ public class Konzole {
     private Batoh b;
     private Postavy post;
     private AplikacePouzitiPredmetu pouz;
-    private String hledanyPredmet;
+    //private String hledanyPredmet;
 
 
-    public Konzole(Pohyb po, Predmety pr, Batoh b, Postavy post, AplikacePouzitiPredmetu pouz, String hledanyPredmet) throws IOException {
+    public Konzole(Pohyb po, Predmety pr, Batoh b, Postavy post, AplikacePouzitiPredmetu pouz) throws IOException {
         this.po = po;
         this.pr = pr;
         this.b = b;
         this.post = post;
         this.pouz = pouz;
-        this.hledanyPredmet = hledanyPredmet;
+        //this.hledanyPredmet = hledanyPredmet;
     }
 
     public Konzole(Pohyb po, Predmet pacidlo, Predmety pr, Batoh b, Postavy post, Postava duch, Postava bailie, Postava james, AplikacePouzitiPredmetu bedna) throws IOException {
@@ -38,7 +38,7 @@ public class Konzole {
     public void inicializace() throws IOException {
         mapa.put("Jit", new JitDoMistn(po));
         mapa.put("Mluvit", new MluvitSpos(post, po));
-        mapa.put("Nakrmit", new NakrmitBailie(post, b, hledanyPredmet));
+        mapa.put("Nakrmit", new NakrmitBailie(post, b));
         mapa.put("Pouzit", new PouzitPredm(pr, b, pouz, post));
         mapa.put("Vzit", new VzitP(pr, po, b));
         mapa.put("Exit", new Exit());
@@ -81,5 +81,4 @@ public class Konzole {
             return false;
         }
     }
-
 }

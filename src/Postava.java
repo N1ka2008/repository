@@ -9,17 +9,19 @@ public class Postava extends Mistnost{
     private boolean jeZaporna;
     private boolean jeOchocena;
     private String monolog;
+    private Batoh b;
 
     public Postava(String nazev) {
 
         super(nazev);
     }
 
-    public Postava(String nazev, String jmeno, boolean jeZaporna, String monolog) {
+    public Postava(String nazev, String jmeno, boolean jeZaporna, String monolog, Batoh b) {
         super(nazev);
         this.jmeno = jmeno;
         this.jeZaporna = jeZaporna;
         this.monolog = monolog;
+        this.b = b;
     }
 
     public Postava(String nazev, String jmeno, boolean jeZaporna) {
@@ -39,7 +41,7 @@ public class Postava extends Mistnost{
      * Zjisteni jestli je postava v mistnosti
      */
     public boolean jeVMistnosti(String nazevMistnosti) {
-        if(nazevMistnosti.equalsIgnoreCase(nazev) && jeZaporna == false){
+        if(nazevMistnosti.equalsIgnoreCase(nazev) && !isJeZaporna()){
             setJeVMistnosti(true);
         }else {
             setJeVMistnosti(false);
@@ -51,8 +53,10 @@ public class Postava extends Mistnost{
      * Metoda pro souboj
      */
     public void souboj(){
-        if(jeZaporna == true){
-
+        for(Predmet p : b.getPredmety()) {
+            if (isJeZaporna() && p.getNazevPr().equalsIgnoreCase("nuz") && isJeVMistnosti()) {
+                System.out.println();
+            }
         }
     }
 

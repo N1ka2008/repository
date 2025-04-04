@@ -59,9 +59,8 @@ public class AplikacePouzitiPredmetu {
      */
     public String pouzitiPsihoKrm(){
         for(Postava pos : post.postavy) {
-            if (pos.getJmeno().equalsIgnoreCase("Bailie") && pos.isJeOchocena() == true && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
+            if (pos.getJmeno().equalsIgnoreCase("Bailie") && pos.isJeOchocena() && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
                 return "Vidis Bailie skrabat na stenu, mozna se tam skryva dalsi tajna mistnost";
-
             }
         }
         return null;
@@ -70,11 +69,14 @@ public class AplikacePouzitiPredmetu {
     /**
      * Metda pro pouziti 1. klice
      */
-    public void pouzitiKlice1(){
+    public boolean pouzitiKlice1(){
         if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
+            System.out.println("Nyni muzes jit do 1. tajne mistnosti");
             po.setAktualniMistnost(lo.getMistnost("1. tajna mistnost"));
             System.out.println("Aktualni mistnost: " + po.getAktualniMistnost());
+            return true;
         }
+        return false;
     }
 
     /**

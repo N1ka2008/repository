@@ -12,17 +12,18 @@ public class Hra {
         Lokace l = new Lokace(".idea/soub.txt");
         Pohyb po = new Pohyb(l.getMistnost("hala"));
         Predmety pr = new Predmety(po);
-        Predmet pacidlo = new Predmet("koupeln", "pacidlo");
-        Predmet klic1 = new Predmet("koupeln", "1. klic");
+        Batoh b = new Batoh();
+        Predmet pacidlo = new Predmet("sklep", "pacidlo");
+        Predmet klic1 = new Predmet("koupelna", "1. klic");
         Predmet nuz = new Predmet("loznice", "nuz");
-        Predmet psiK = new Predmet("koupelna", "psi krmeni");
+        Predmet psiK = new Predmet("kuchyn", "psi krmeni");
         Predmet klic2 = new Predmet("2. detsky pokoj", "2. klic");
         Postavy post = new Postavy(po);
-        Postava duch = new Postava("1. detsky pokoj", "duch", false, "Veta.....................................   ");
-        Postava bailie = new Postava("kuchyn", "Bailie", false, false);
-        Postava james = new Postava("2. tajna mistnost", "James", true, "vetaaaaaa");
-        Batoh b = new Batoh();
-        String hledanyPredmet = "psi krmeni";
+        Postava duch = new Postava("1. detsky pokoj", "duch", false, "Uz jsi nasel 1. klic? Mel by byt v koupelne" +
+                "\n Pomoci neho otevres tajnou mistnost pripojenou k loznici", b);
+        Postava bailie = new Postava("1. tajna mistnost", "Bailie", false, false);
+        Postava james = new Postava("2. tajna mistnost", "James", true, "vetaaaaaa", b);
+        //String hledanyPredmet = "psi krmeni";
 
 
         pr.add(pacidlo);
@@ -37,7 +38,12 @@ public class Hra {
         AplikacePouzitiPredmetu bedna = new AplikacePouzitiPredmetu("jidelna", po, pr, b, post, l);
 
 
-        Konzole k = new Konzole(po, pr, b, post, bedna, hledanyPredmet);
+        Konzole k = new Konzole(po, pr, b, post, bedna);
+
+
+
+        //Soubory s = new Soubory();
+        //s.load("name");
 
         System.out.println("Zacinas v mistnosti: " + po.getAktualniMistnost());
             try {
@@ -56,6 +62,8 @@ public class Hra {
                     bailie.jeVMistnosti(po.getAktualniMistnost());
                     james.jeVMistnosti(po.getAktualniMistnost());
                     post.vypis();
+                    bedna.pouzitiPsihoKrm();
+                    james.souboj();
 
 
                 } while (k.start() == true);

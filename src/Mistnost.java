@@ -8,15 +8,27 @@ import java.util.List;
 public class Mistnost {
 
     String nazev;
+    private AplikacePouzitiPredmetu pouz;
 
     List<Mistnost> sousedni = new ArrayList<>();
+
+    public Mistnost(String nazev, AplikacePouzitiPredmetu pouz) {
+        this.nazev = nazev;
+    }
 
     public Mistnost(String nazev) {
         this.nazev = nazev;
     }
 
     public void pridatSousedni(Mistnost mistnost) {
+
         sousedni.add(mistnost);
+        if(pouz.pouzitiKlice1()){
+            String mist = "1. tajna mistnost";
+            mistnost.setNazev(mist);
+            sousedni.add(mistnost);
+        }
+
     }
 
     public String getNazev() {

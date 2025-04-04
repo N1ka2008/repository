@@ -12,7 +12,6 @@ public class Pohyb {
 
     }
 
-
     /**
      * Zajisti presun do hracem urcene mistnosti. Pokud mistnost neexistuje nebo nesousedi s aktualni
      * hrac zustane v aktualni mistnosti

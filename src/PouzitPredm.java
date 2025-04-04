@@ -57,6 +57,4 @@ public class PouzitPredm extends Command {
             public boolean exit () {
                 return false;
             }
-
-
 }
