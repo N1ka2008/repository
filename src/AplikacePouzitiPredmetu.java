@@ -69,14 +69,12 @@ public class AplikacePouzitiPredmetu {
     /**
      * Metda pro pouziti 1. klice
      */
-    public boolean pouzitiKlice1(){
+    public void pouzitiKlice1(){
         if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
-            System.out.println("Nyni muzes jit do 1. tajne mistnosti");
+            //System.out.println("Nyni muzes jit do 1. tajne mistnosti");
             po.setAktualniMistnost(lo.getMistnost("1. tajna mistnost"));
             System.out.println("Aktualni mistnost: " + po.getAktualniMistnost());
-            return true;
         }
-        return false;
     }
 
     /**

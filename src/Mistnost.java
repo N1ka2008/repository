@@ -23,11 +23,6 @@ public class Mistnost {
     public void pridatSousedni(Mistnost mistnost) {
 
         sousedni.add(mistnost);
-        if(pouz.pouzitiKlice1()){
-            String mist = "1. tajna mistnost";
-            mistnost.setNazev(mist);
-            sousedni.add(mistnost);
-        }
 
     }
 
