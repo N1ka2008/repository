@@ -38,15 +38,16 @@ public class Hra {
         pr.add(klic2);
         pr.add(nuz);
         pr.add(psiK);
+        pr.add(fotoaparat);
         post.add(duch);
         post.add(bailie);
         post.add(james);
 
         s.instrukce("text");
 
-        System.out.println("Zacinas v mistnosti: " + po.getAktualniMistnost());
         s.cteni("text");
         b.pridatDoBatohu(fotoaparat);
+        System.out.println("Zacinas v mistnosti: " + po.getAktualniMistnost());
         try {
             do {
                 k.start();
@@ -67,7 +68,11 @@ public class Hra {
                 james.souboj();
 
 
-            } while (k.start() == true && post.isKonecHry());
+            } while (k.start() == true && !post.isKonecHry());
+            if(post.isKonecHry()){
+                System.out.println("Gratuluji, zachranil jsi divku a porazil Jamese");
+            }
+            System.out.println("Konec hry!!!");
         } catch (Exception e) {
             System.out.println(e);
         }

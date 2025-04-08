@@ -44,7 +44,7 @@ public class AplikacePouzitiPredmetu {
      */
     public String pouzitPac(){
         setJeBednaOtevrena(true);
-                return "V bedne jsi nasel fotku rodiny." + "\nJe na ni otec a matka s jejich dvemi detmi. Ale vsichni krome nejmladsi dcery jsou preskrtnuti.";
+        return "V bedne jsi nasel fotku rodiny. Je na ni otec a matka s jejich dvemi detmi. Ale vsichni krome nejmladsi dcery jsou preskrtnuti.";
 
     }
 
@@ -52,7 +52,7 @@ public class AplikacePouzitiPredmetu {
      * Metoda pro pouziti fotoaparatu
      */
     public String pouzitFotoaparat(){
-             return "Poridil jsi fotografii";
+        return "Poridil jsi fotografii";
     }
 
     public String pouzitiNoze(){
