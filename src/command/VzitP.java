@@ -1,7 +1,14 @@
+package command;
+
+import tridy.Batoh;
+import tridy.Pohyb;
+import tridy.Predmet;
+import tridy.Predmety;
+
 import java.io.IOException;
 
 /**
- * Command Vzit
+ * command.Command Vzit
  */
 public class VzitP extends Command {
 
@@ -28,7 +35,7 @@ public class VzitP extends Command {
                     predmetNalezen = true;
                     break;
                 } else {
-                    System.out.println("Predmet " + pe.getNazevPr() + " neni v mistnosti");
+                    System.out.println("tridy.Predmet " + pe.getNazevPr() + " neni v mistnosti");
                     predmetNalezen = true;
                 }
             }

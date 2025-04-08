@@ -1,3 +1,5 @@
+package tridy;
+
 import java.util.ArrayList;
 
 /**
@@ -7,7 +9,7 @@ public class Postavy {
 
     private boolean konecHry;
 
-    ArrayList<Postava> postavy = new ArrayList<>();
+    public ArrayList<Postava> postavy = new ArrayList<>();
 
     /**
      * Pridani postav do arraylistu

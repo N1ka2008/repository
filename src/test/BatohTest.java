@@ -1,7 +1,14 @@
+package test;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import tridy.Batoh;
+import tridy.Predmet;
+
 import static org.junit.Assert.*;
 import java.io.IOException;
+
 
 public class BatohTest {
 
@@ -17,12 +24,12 @@ public class BatohTest {
 
         Predmet pacidlo = new Predmet("koupelna", "pacidlo");
 
-        assertEquals(0, b.getPredmety().size());
+        Assert.assertEquals(0, b.getPredmety().size());
 
         b.pridatDoBatohu(pacidlo);
 
-        assertEquals(1, b.getPredmety().size());
-        assertEquals("pacidlo", b.getPredmety().get(0).getNazevPr());
+        Assert.assertEquals(1, b.getPredmety().size());
+        Assert.assertEquals("pacidlo", b.getPredmety().get(0).getNazevPr());
         assertTrue(pacidlo.isJeVzaty());
     }
 }

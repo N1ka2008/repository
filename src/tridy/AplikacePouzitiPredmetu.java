@@ -1,3 +1,7 @@
+package tridy;
+
+import command.PouzitPredm;
+
 /**
  * Trida pro kontrolu pouzivani predmetu
  */

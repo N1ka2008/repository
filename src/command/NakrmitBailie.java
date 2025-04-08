@@ -1,7 +1,14 @@
+package command;
+
+import tridy.Batoh;
+import tridy.Postava;
+import tridy.Postavy;
+import tridy.Predmet;
+
 /**
- * Command Nakrmit Bailie
+ * command.Command Nakrmit Bailie
  */
-public class NakrmitBailie extends Command{
+public class NakrmitBailie extends Command {
 
     private Postavy pos;
     private Batoh b;
@@ -19,19 +26,7 @@ public class NakrmitBailie extends Command{
     }
 
     public boolean execute(String argument) {
-       /* for(Postava post : pos.postavy) {
-            for (Predmet p : b.getPredmety()) {
-                if (p.getNazev().equals(hledanyPredmet) && post.getJmeno().equalsIgnoreCase("Bailie")) {
-                    System.out.println("ochocil jsi si Bailie");
-                    post.setJeOchocena(true);
-                    System.out.println("Bailie te vede do sklepa nasleduj ji");
-                } else {
-                    System.out.println("Musis najit psi krmeni");
-                }
-            }
-        }
 
-        */
         boolean bailieNalezena = false;
         boolean predmetNalezen = false;
 

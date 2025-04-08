@@ -1,7 +1,11 @@
+package command;
+
+import tridy.Batoh;
+
 /**
- * Command Zobrazit
+ * command.Command Zobrazit
  */
-public class ZobrazitBatoh extends Command{
+public class ZobrazitBatoh extends Command {
 
     private Batoh b;
 
@@ -11,7 +15,7 @@ public class ZobrazitBatoh extends Command{
 
     @Override
     public boolean execute(String argument) {
-        if(!(b.predmety == null)){
+        if(!(b.getPredmety() == null)){
             b.vypsatObsah();
         }
         return true;

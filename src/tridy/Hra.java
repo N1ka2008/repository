@@ -1,3 +1,5 @@
+package tridy;
+
 import java.io.IOException;
 
 /**

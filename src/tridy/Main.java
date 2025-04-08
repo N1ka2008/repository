@@ -1,6 +1,8 @@
+package tridy;
+
 import java.io.IOException;
 /**
- * Trida Main
+ * Trida tridy.Main
  */
 public class Main {
     public static void main(String[] args) throws IOException {

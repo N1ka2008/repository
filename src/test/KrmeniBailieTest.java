@@ -1,5 +1,10 @@
+package test;
+
+import command.NakrmitBailie;
 import org.junit.Before;
 import org.junit.Test;
+import tridy.*;
+
 import static org.junit.Assert.*;
 import java.io.IOException;
 

@@ -1,9 +1,13 @@
+package tridy;
+
+import command.*;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * Konzole pro commands
+ * tridy.Konzole pro commands
  */
 public class Konzole {
 
@@ -39,7 +43,7 @@ public class Konzole {
         mapa.put("Nakrmit", new NakrmitBailie(post, b));
         mapa.put("Pouzit", new PouzitPredm(pr, b, pouz, post));
         mapa.put("Vzit", new VzitP(pr, po, b));
-        mapa.put("Exit", new Exit());
+        mapa.put("command.Exit", new Exit());
         mapa.put("Zobrazit", new ZobrazitBatoh(b));
     }
 

@@ -1,9 +1,11 @@
+package tridy;
+
 import java.io.IOException;
 
 /**
  * Trida pro predmet
  */
-public class Predmet extends Mistnost{
+public class Predmet extends Mistnost {
 
     private String nazevPr;
     private boolean jeVMistnosti;

@@ -1,8 +1,10 @@
+package tridy;
+
 /**
  * Trida pro postavu
  */
 
-public class Postava extends Mistnost{
+public class Postava extends Mistnost {
 
     private String jmeno;
     private boolean jeVMistnosti = true;
@@ -53,7 +55,7 @@ public class Postava extends Mistnost{
      * Metoda pro souboj
      */
     public boolean souboj() {
-       /* for(Predmet p : b.getPredmety()) {
+       /* for(tridy.Predmet p : b.getPredmety()) {
             if (isJeZaporna() && p.getNazevPr().equalsIgnoreCase("nuz") && isJeVMistnosti()) {
                 System.out.println("Vypada to ze si te James zatim nevsiml, pokud chces zachranit divku musis s nim bojovat");
                 System.out.println("POZOR! Musis se branit nozem");

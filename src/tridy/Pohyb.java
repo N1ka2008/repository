@@ -1,3 +1,5 @@
+package tridy;
+
 /**
  * Trida pro pohyb
  */

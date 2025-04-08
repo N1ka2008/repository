@@ -1,3 +1,5 @@
+package tridy;
+
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,7 @@ public class Batoh {
     public String pridatDoBatohu(Predmet p){
             predmety.add(p);
             p.setJeVzaty(true);
-            return "Predmet pridan do batohu";
+            return "tridy.Predmet pridan do batohu";
     }
 
     public ArrayList<Predmet> getPredmety() {

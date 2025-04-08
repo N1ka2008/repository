@@ -1,7 +1,13 @@
+package command;
+
+import tridy.Pohyb;
+import tridy.Postava;
+import tridy.Postavy;
+
 /**
- * Command Mluvit
+ * command.Command Mluvit
  */
-public class MluvitSpos extends Command{
+public class MluvitSpos extends Command {
 
     private Postavy pos;
     private Pohyb po;

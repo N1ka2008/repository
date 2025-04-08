@@ -1,3 +1,5 @@
+package tridy;
+
 import java.io.*;
 
 public class Soubory {
@@ -8,7 +10,7 @@ public class Soubory {
     public void instrukce(String text){
         String obsah = "Dostupne commandy: 'Pouzit' pro pouziti predmetu. 'Jit' pro pohyb do dalsi mistnosti.";
         String obsah2 = "'Vzit' pro vzati predmetu. 'Nakrmit' pro nakrmeni postav. 'Mluvit' pro mluveni s postavou.";
-        String obsah3 =  "'Zobrazit' pro zobrazeni batohu.'Exit' pro ukonceni hry";
+        String obsah3 =  "'Zobrazit' pro zobrazeni batohu.'command.Exit' pro ukonceni hry";
 
         String mistnosti = "Mistnosti na 1. patre: hala, koupelna, kuchyn, jidelna";
         String mistnosti2 = "Mistnosti na 2. patre: chodba, 1. detsky pokoj, 2. detsky pokoj, loznice";

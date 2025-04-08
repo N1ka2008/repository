@@ -1,5 +1,9 @@
+package command;
+
+import tridy.*;
+
 /**
- * Command Pouzit
+ * command.Command Pouzit
  */
 public class PouzitPredm extends Command {
 
@@ -7,7 +11,7 @@ public class PouzitPredm extends Command {
     private Batoh b;
     private AplikacePouzitiPredmetu pac;
     private Postavy post;
-    //private Konzole k;
+    //private tridy.Konzole k;
 
     public PouzitPredm(Predmety p, Batoh b, AplikacePouzitiPredmetu pac, Postavy post) {
         this.p = p;
@@ -25,7 +29,7 @@ public class PouzitPredm extends Command {
         for (Predmet pe : p.premeti) {
             if (pe.getNazevPr().equalsIgnoreCase(argument)) {
                 if (b.getPredmety().stream().anyMatch(item -> item.getNazevPr().equalsIgnoreCase(argument))) {
-                    System.out.println("Predmet pouzit: " + pe.getNazevPr());
+                    System.out.println("tridy.Predmet pouzit: " + pe.getNazevPr());
                     switch (argument.toLowerCase()) {
                         case "pacidlo":
                             if (pac.bedna() == true) {

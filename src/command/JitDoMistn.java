@@ -1,8 +1,12 @@
+package command;
+
+import tridy.Pohyb;
+
 import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Command Jit
+ * command.Command Jit
  */
 public class JitDoMistn extends Command {
 

@@ -1,3 +1,5 @@
+package tridy;
+
 import java.util.ArrayList;
 
 /**
@@ -5,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Predmety {
 
-    ArrayList<Predmet> premeti = new ArrayList<>();
+    public ArrayList<Predmet> premeti = new ArrayList<>();
 
     /**
      * Pridani predmetu do arraylistu
