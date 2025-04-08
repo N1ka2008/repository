@@ -7,6 +7,7 @@ public class PouzitPredm extends Command {
     private Batoh b;
     private AplikacePouzitiPredmetu pac;
     private Postavy post;
+    //private Konzole k;
 
     public PouzitPredm(Predmety p, Batoh b, AplikacePouzitiPredmetu pac, Postavy post) {
         this.p = p;
@@ -42,7 +43,18 @@ public class PouzitPredm extends Command {
                             pac.pouzitiKlice2();
                         break;
                         case "psi krmeni":
-                            System.out.println(pac.pouzitiPsihoKrm());
+                            for(Postava pos : post.postavy) {
+                                pac.pouzitiPsihoKrm(pos);
+                            }
+                            break;
+                        case "nuz":
+                            for(Postava pos : post.postavy) {
+                                if(pos.souboj() == true) {
+                                    pac.pouzitiNoze();
+                                    post.setKonecHry(true);
+                                }
+                                //post.setKonecHry(true);
+                            }
                             break;
                     }
                 } else {

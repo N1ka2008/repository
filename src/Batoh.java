@@ -25,9 +25,9 @@ public class Batoh {
      */
     public void vypsatObsah(){
         for(Predmet p : predmety){
-            for(int i = 0; i < predmety.size(); i++) {
+            //for(int i = 0; i < predmety.size(); i++) {
                 System.out.println(p.getNazevPr());
-            }
+            //}
         }
     }
 }

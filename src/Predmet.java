@@ -9,8 +9,9 @@ public class Predmet extends Mistnost{
     private boolean jeVMistnosti;
     private boolean jeVzaty = false;
 
-    public Predmet(String nazev) throws IOException {
-        super(nazev);
+    public Predmet(String nazevPr) throws IOException {
+        //super(nazev);
+        this.nazevPr = nazevPr;
     }
 
     public Predmet(String nazev, String nazevPr) throws IOException {
@@ -20,6 +21,7 @@ public class Predmet extends Mistnost{
 
     public Predmet() throws IOException {
         super(null);
+
     }
 
     /**

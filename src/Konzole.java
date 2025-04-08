@@ -17,8 +17,6 @@ public class Konzole {
     private Batoh b;
     private Postavy post;
     private AplikacePouzitiPredmetu pouz;
-    //private String hledanyPredmet;
-
 
     public Konzole(Pohyb po, Predmety pr, Batoh b, Postavy post, AplikacePouzitiPredmetu pouz) throws IOException {
         this.po = po;

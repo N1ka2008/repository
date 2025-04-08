@@ -41,7 +41,7 @@ public class Postava extends Mistnost{
      * Zjisteni jestli je postava v mistnosti
      */
     public boolean jeVMistnosti(String nazevMistnosti) {
-        if(nazevMistnosti.equalsIgnoreCase(nazev) && !isJeZaporna()){
+        if(nazevMistnosti.equalsIgnoreCase(nazev)){
             setJeVMistnosti(true);
         }else {
             setJeVMistnosti(false);
@@ -52,12 +52,18 @@ public class Postava extends Mistnost{
     /**
      * Metoda pro souboj
      */
-    public void souboj(){
+    public boolean souboj(){
         for(Predmet p : b.getPredmety()) {
             if (isJeZaporna() && p.getNazevPr().equalsIgnoreCase("nuz") && isJeVMistnosti()) {
-                System.out.println();
+                System.out.println("Vypada to ze si te James zatim nevsiml, pokud chces zachranit divku musis s nim bojovat");
+                System.out.println("POZOR! Musis se branit nozem");
+                return true;
+            } else if(!p.getNazevPr().equalsIgnoreCase("nuz")){
+                System.out.println("Jdi najit nuz");
+                return false;
             }
         }
+        return false;
     }
 
     public String getJmeno() {

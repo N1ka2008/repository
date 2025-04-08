@@ -44,7 +44,8 @@ public class AplikacePouzitiPredmetu {
      */
     public String pouzitPac(){
         setJeBednaOtevrena(true);
-                return "V bedne jsi nasel fotku rodiny";
+                return "V bedne jsi nasel fotku rodiny." + "\nJe na ni otec a matka s jejich dvemi detmi. Ale vsichni krome nejmladsi dcery jsou preskrtnuti.";
+
     }
 
     /**
@@ -54,16 +55,18 @@ public class AplikacePouzitiPredmetu {
              return "Poridil jsi fotografii";
     }
 
+    public String pouzitiNoze(){
+        return "Tvuj uder byl velmi presny, zachranil jsi divku";
+    }
+
     /**
      * Metoda pro pouziti psiho krmeni
      */
-    public String pouzitiPsihoKrm(){
-        for(Postava pos : post.postavy) {
+    public void pouzitiPsihoKrm(Postava pos){
             if (pos.getJmeno().equalsIgnoreCase("Bailie") && pos.isJeOchocena() && po.getAktualniMistnost().equalsIgnoreCase("sklep")) {
-                return "Vidis Bailie skrabat na stenu, mozna se tam skryva dalsi tajna mistnost";
+                System.out.println("Vidis Bailie skrabat na stenu, mozna se tam skryva dalsi tajna mistnost");
+                pos.setJeVMistnosti(false);
             }
-        }
-        return null;
     }
 
     /**

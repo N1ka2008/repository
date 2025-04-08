@@ -5,6 +5,8 @@ import java.util.ArrayList;
  */
 public class Postavy {
 
+    private boolean konecHry;
+
     ArrayList<Postava> postavy = new ArrayList<>();
 
     /**
@@ -28,9 +30,18 @@ public class Postavy {
             if (p.nazev.equalsIgnoreCase(po.getAktualniMistnost())) {
                 System.out.println("V teto mistnosti se nachazi " + p.getJmeno());
                 if(p.isJeZaporna()){
-                    System.out.println("Pozor! muze byt nebezpecny");
+                    System.out.println("Vidis divku schovanou pod stolem, nad kterym James.....");
+                    System.out.println(p.getMonolog());
                 }
             }
         }
+    }
+
+    public boolean isKonecHry() {
+        return konecHry;
+    }
+
+    public void setKonecHry(boolean konecHry) {
+        this.konecHry = konecHry;
     }
 }
