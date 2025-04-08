@@ -8,6 +8,9 @@ import tridy.Pohyb;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro test pohybu
+ */
 public class PohybTest {
 
     private Lokace l;
@@ -19,6 +22,9 @@ public class PohybTest {
         po = new Pohyb(l.getMistnost("hala"));
     }
 
+    /**
+     * Test pohybu
+     */
     @Test
     public void testPohybMeziMistnostmi() {
 

@@ -8,6 +8,9 @@ import tridy.*;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro testovani krmeni Bailie
+ */
 public class KrmeniBailieTest {
 
         private Lokace l;
@@ -23,7 +26,10 @@ public class KrmeniBailieTest {
             b = new Batoh();
         }
 
-        @Test
+    /**
+     * test krmeni bailie
+     */
+    @Test
         public void testNakrmitBailie() throws IOException {
 
             Predmet psiKrmeni = new Predmet("kuchyn", "psi krmeni");

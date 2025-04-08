@@ -7,6 +7,9 @@ import tridy.*;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro test postav
+ */
 public class PostavaTest {
 
     private Lokace l;
@@ -21,6 +24,9 @@ public class PostavaTest {
         post = new Postavy(po);
     }
 
+    /**
+     * Test jestli je postava v mistnosti
+     */
     @Test
     public void testPostavaVMistnosti() throws IOException {
 

@@ -9,7 +9,9 @@ import tridy.Predmet;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
-
+/**
+ * Trida pro testovani batohu
+ */
 public class BatohTest {
 
     private Batoh b;
@@ -19,6 +21,9 @@ public class BatohTest {
         b = new Batoh();
     }
 
+    /**
+     * Test batohu
+     */
     @Test
     public void testPridaniPredmetuDoBatohu() throws IOException {
 

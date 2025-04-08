@@ -7,6 +7,9 @@ import tridy.*;
 import static org.junit.Assert.*;
 import java.io.IOException;
 
+/**
+ * Trida pro test pouziti predmetu
+ */
 public class PouzitipredmetuTest {
 
     private Lokace l;
@@ -26,6 +29,9 @@ public class PouzitipredmetuTest {
         pouz = new AplikacePouzitiPredmetu("jidelna", po, pr, b, post, l);
     }
 
+    /**
+     * Test jestli je bedna v mistnosti
+     */
     @Test
     public void testBedna() {
         po.setAktualniMistnost(l.getMistnost("jidelna"));
@@ -33,6 +39,9 @@ public class PouzitipredmetuTest {
         assertTrue(pouz.bedna());
     }
 
+    /**
+     * Test pouziti pacidla
+     */
     @Test
     public void testPouzitPac() {
         assertFalse(pouz.isJeBednaOtevrena());
