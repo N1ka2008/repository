@@ -22,10 +22,9 @@ public class Pohyb {
                 aktualniMistnost = soused;
                 System.out.println("Aktualni mystnost: " + nazev);
                 return;
-            }else {
-                System.out.println("Do teto mistnosti nemuzes");
             }
         }
+        System.out.println("Do teto mistnosti nemuzes");
     }
 
     public String getAktualniMistnost() {

@@ -12,7 +12,7 @@ public class Hra {
         Pohyb po = new Pohyb(l.getMistnost("hala"));
         Predmety pr = new Predmety(po);
         Batoh b = new Batoh();
-        Predmet fotoaparat = new Predmet("fotoaparat");
+        Predmet fotoaparat = new Predmet("hala","fotoaparat");
         Predmet pacidlo = new Predmet("sklep", "pacidlo");
         Predmet klic1 = new Predmet("koupelna", "1. klic");
         Predmet nuz = new Predmet("loznice", "nuz");
@@ -31,6 +31,9 @@ public class Hra {
     Soubory s = new Soubory();
 
 
+    /**
+     * Metoda pro spusteni a hrani hry
+     */
     public void hra() throws IOException {
 
         pr.add(pacidlo);
@@ -44,10 +47,12 @@ public class Hra {
         post.add(james);
 
         s.instrukce("text");
+        s.Zacatek("zacatek");
 
         s.cteni("text");
+        s.cteni2("zacatek");
         b.pridatDoBatohu(fotoaparat);
-        System.out.println("Zacinas v mistnosti: " + po.getAktualniMistnost());
+        System.out.println("\n\n\nZacinas v mistnosti: " + po.getAktualniMistnost());
         try {
             do {
                 k.start();

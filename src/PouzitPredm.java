@@ -49,13 +49,14 @@ public class PouzitPredm extends Command {
                             break;
                         case "nuz":
                             for(Postava pos : post.postavy) {
-                                if(pos.souboj() == true) {
-                                    pac.pouzitiNoze();
-                                    post.setKonecHry(true);
+                                if (pos.getJmeno().equalsIgnoreCase("James") && pos.isJeVMistnosti()) {
+                                    if(pos.souboj() == true) {
+                                        System.out.println(pac.pouzitiNoze());
+                                        post.setKonecHry(true);
+                                        break;
+                                    }
                                 }
-                                //post.setKonecHry(true);
                             }
-                            break;
                     }
                 } else {
                     System.out.println("Tento predmet nemate");

@@ -2,6 +2,9 @@ import java.io.*;
 
 public class Soubory {
 
+    /**
+     * Soubor pro zapsani instrukci
+     */
     public void instrukce(String text){
         String obsah = "Dostupne commandy: 'Pouzit' pro pouziti predmetu. 'Jit' pro pohyb do dalsi mistnosti.";
         String obsah2 = "'Vzit' pro vzati predmetu. 'Nakrmit' pro nakrmeni postav. 'Mluvit' pro mluveni s postavou.";
@@ -29,6 +32,9 @@ public class Soubory {
 
     }
 
+    /**
+     * Soubor pro precteni instrukci
+     */
     public void cteni(String text){
         try(BufferedReader rd = new BufferedReader(new FileReader(text))){
             String obsah = rd.readLine();
@@ -45,11 +51,36 @@ public class Soubory {
         }
     }
 
+    /**
+     * Soubor pro zacatek prubehu
+     */
     public void Zacatek(String text){
         String story = "Jsi detektiv, ktery ma za ukol jit do domu ve kterem zahadne zmizela rodina.";
         String story2 = "Musis zjistit kdo ma zmizeni na svedomi a pripadne najit prezivsi";
         String story3 = "Projdi vsechny mistnosti, pozbirej predmety a vyhraj hru. Startovni predmet: fotoaparat";
         try (BufferedWriter wr = new BufferedWriter(new FileWriter(text))) {
+            wr.write(story);
+            wr.newLine();
+            wr.write(story2);
+            wr.newLine();
+            wr.write(story3);
+            wr.newLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Soubor pro nacteni pribehu
+     */
+    public void cteni2(String text){
+        try(BufferedReader rd = new BufferedReader(new FileReader(text))){
+            String story = rd.readLine();
+            String story2 = rd.readLine();
+            String story3 = rd.readLine();
+            System.out.println(story + "\n" + story2 + "\n\n" + story3);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

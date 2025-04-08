@@ -29,7 +29,6 @@ public class Predmet extends Mistnost{
      */
     public boolean jeVMistnosti(String nazevMistnosti) {
         if(nazevMistnosti.equalsIgnoreCase(nazev) && jeVzaty == false){
-            System.out.println("Aaaaa");
             jeVMistnosti = true;
 
         }else {
