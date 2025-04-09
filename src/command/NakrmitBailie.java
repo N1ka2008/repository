@@ -6,19 +6,16 @@ import tridy.Postavy;
 import tridy.Predmet;
 
 /**
- * command.Command Nakrmit Bailie
+ * Command Nakrmit Bailie
  */
 public class NakrmitBailie extends Command {
 
     private Postavy pos;
     private Batoh b;
-    //private String hledanyPredmet;
-
 
     public NakrmitBailie(Postavy pos, Batoh b) {
         this.pos = pos;
         this.b = b;
-        //this.hledanyPredmet = hledanyPredmet;
     }
 
     public NakrmitBailie(Predmet p) {

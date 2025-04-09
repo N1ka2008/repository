@@ -9,17 +9,11 @@ public class AplikacePouzitiPredmetu {
 
 
     private String nachaziSe;
-
     private boolean jeBednaOtevrena = false;
-
     private Pohyb po;
-
     private PouzitPredm pouz;
-
     private Postavy post;
-
     private Lokace lo;
-
     private Batoh b;
 
     public AplikacePouzitiPredmetu(String nachaziSe, Pohyb po, Predmety p, Batoh b, Postavy post, Lokace lo) {
@@ -78,7 +72,6 @@ public class AplikacePouzitiPredmetu {
      */
     public void pouzitiKlice1(){
         if(pouz.execute("Pouzit 1. klic") && po.getAktualniMistnost().equalsIgnoreCase("loznice")) {
-            //System.out.println("Nyni muzes jit do 1. tajne mistnosti");
             po.setAktualniMistnost(lo.getMistnost("1. tajna mistnost"));
             System.out.println("Aktualni mistnost: " + po.getAktualniMistnost());
         }

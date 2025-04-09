@@ -31,7 +31,6 @@ public class Soubory {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     /**

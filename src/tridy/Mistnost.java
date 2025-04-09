@@ -22,9 +22,7 @@ public class Mistnost {
     }
 
     public void pridatSousedni(Mistnost mistnost) {
-
         sousedni.add(mistnost);
-
     }
 
     public String getNazev() {

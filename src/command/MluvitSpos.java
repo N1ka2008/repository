@@ -5,7 +5,7 @@ import tridy.Postava;
 import tridy.Postavy;
 
 /**
- * command.Command Mluvit
+ * Command Mluvit
  */
 public class MluvitSpos extends Command {
 

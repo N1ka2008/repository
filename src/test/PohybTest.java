@@ -27,10 +27,8 @@ public class PohybTest {
      */
     @Test
     public void testPohybMeziMistnostmi() {
-
         String pocatecniMistnost = po.getAktualniMistnost();
         assertEquals("hala", pocatecniMistnost);
-
     }
 
 }

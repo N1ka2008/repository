@@ -14,7 +14,6 @@ public class Postava extends Mistnost {
     private Batoh b;
 
     public Postava(String nazev) {
-
         super(nazev);
     }
 
@@ -55,19 +54,6 @@ public class Postava extends Mistnost {
      * Metoda pro souboj
      */
     public boolean souboj() {
-       /* for(tridy.Predmet p : b.getPredmety()) {
-            if (isJeZaporna() && p.getNazevPr().equalsIgnoreCase("nuz") && isJeVMistnosti()) {
-                System.out.println("Vypada to ze si te James zatim nevsiml, pokud chces zachranit divku musis s nim bojovat");
-                System.out.println("POZOR! Musis se branit nozem");
-                return true;
-            } else if(!p.getNazevPr().equalsIgnoreCase("nuz")){
-                System.out.println("Jdi najit nuz");
-                return false;
-            }
-        }
-        return false;
-
-        */
         if (isJeZaporna() && isJeVMistnosti()) {
             boolean maNuz = false;
             for (Predmet p : b.getPredmety()) {

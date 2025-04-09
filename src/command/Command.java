@@ -1,13 +1,5 @@
 package command;
 
-import org.junit.Before;
-import org.junit.Test;
-import tridy.*;
-
-import java.io.IOException;
-
-import static org.junit.Assert.*;
-
 /**
  * Commands
  */

@@ -38,7 +38,6 @@ public class Postavy {
             }
         }
     }
-
     public boolean isKonecHry() {
         return konecHry;
     }

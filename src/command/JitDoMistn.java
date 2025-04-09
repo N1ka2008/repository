@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * command.Command Jit
+ * Command Jit
  */
 public class JitDoMistn extends Command {
 

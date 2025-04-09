@@ -74,7 +74,6 @@ public class Hra {
                 bedna.pouzitiPsihoKrm(bailie);
                 james.souboj();
 
-
             } while (k.start() == true && !post.isKonecHry());
             if(post.isKonecHry()){
                 System.out.println("Gratuluji, zachranil jsi divku a porazil Jamese");

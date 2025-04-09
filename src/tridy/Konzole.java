@@ -28,7 +28,6 @@ public class Konzole {
         this.b = b;
         this.post = post;
         this.pouz = pouz;
-        //this.hledanyPredmet = hledanyPredmet;
     }
 
     public Konzole(Pohyb po, Predmet pacidlo, Predmety pr, Batoh b, Postavy post, Postava duch, Postava bailie, Postava james, AplikacePouzitiPredmetu bedna) throws IOException {
@@ -49,6 +48,7 @@ public class Konzole {
 
     /**
      * Metoda pro provedeni commands
+     * zdroj: chat GPT
      */
     private void proved(){
         System.out.println(">> ");

@@ -2,7 +2,7 @@ package tridy;
 
 import java.io.IOException;
 /**
- * Trida tridy.Main
+ * Trida Main
  */
 public class Main {
     public static void main(String[] args) throws IOException {

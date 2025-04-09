@@ -12,7 +12,7 @@ import java.io.IOException;
 import static org.junit.Assert.*;
 
 /**
- * command.Exit command
+ * Exit command
  */
 public class Exit extends Command {
 

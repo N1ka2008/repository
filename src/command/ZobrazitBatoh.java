@@ -3,7 +3,7 @@ package command;
 import tridy.Batoh;
 
 /**
- * command.Command Zobrazit
+ * Command Zobrazit
  */
 public class ZobrazitBatoh extends Command {
 

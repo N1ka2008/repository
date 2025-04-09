@@ -31,7 +31,6 @@ public class KrmeniBailieTest {
      */
     @Test
         public void testNakrmitBailie() throws IOException {
-
             Predmet psiKrmeni = new Predmet("kuchyn", "psi krmeni");
             b.pridatDoBatohu(psiKrmeni);
             b.vypsatObsah();
@@ -40,7 +39,6 @@ public class KrmeniBailieTest {
             post.add(bailie);
 
             assertFalse(bailie.isJeOchocena());
-
 
             NakrmitBailie nakrm = new NakrmitBailie(post, b);
             nakrm.execute("");

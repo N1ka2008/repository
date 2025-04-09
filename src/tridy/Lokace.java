@@ -20,6 +20,7 @@ public class Lokace {
     /**
      * metoda nacte mapu z textoveho souboru, rozdeli jednotlive mitnosti pomoci ";". Dale zjisti jestli
      * mistnost existuje a jake ma sousedni mistnosti.
+     * zdroj: chat GPT
      */
     private void nacistZeSoub(String file) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(file));

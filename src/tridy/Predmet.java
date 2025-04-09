@@ -12,7 +12,6 @@ public class Predmet extends Mistnost {
     private boolean jeVzaty = false;
 
     public Predmet(String nazevPr) throws IOException {
-        //super(nazev);
         this.nazevPr = nazevPr;
     }
 
@@ -25,7 +24,6 @@ public class Predmet extends Mistnost {
         super(null);
 
     }
-
     /**
      * Zjisteni jestli je predmet v mistnosti
      */

@@ -8,7 +8,7 @@ import tridy.Predmety;
 import java.io.IOException;
 
 /**
- * command.Command Vzit
+ * Command Vzit
  */
 public class VzitP extends Command {
 
