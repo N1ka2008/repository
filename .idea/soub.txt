@@ -3,12 +3,12 @@
 1;jidelna;koupelna;schodiste;kuchyn
 1;kuchyn;jidelna;hala
 1;schodiste;chodba;sklep;jidelna
-2;chodba;detsky pokoj;2 detsky pokoj;schodiste;loznice
-2;detsky pokoj;chodba
+2;chodba;1. detsky pokoj;2. detsky pokoj;schodiste;loznice
+2;1. detsky pokoj;chodba
 2;loznice;schodiste;chodba
 2;1. tajna mistnost;loznice
 2;2. detsky pokoj;chodba
 2;schodiste;hala;loznice
 sklep;sklep;schodiste
-sklep;2 tajna mistnost;sklep
+sklep;2. tajna mistnost;sklep
 skelp;schodiste;chodba

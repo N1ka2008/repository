@@ -21,11 +21,11 @@ public class MluvitSpos extends Command {
         for(Postava post : pos.postavy) {
             if (post.isJeVMistnosti() && post.getJmeno().equalsIgnoreCase("duch")) {
                 System.out.println(post.getMonolog());
-            } else {
-                System.out.println("S touto postavou nemuzes mluvit");
+                return true;
             }
         }
-        return true;
+        System.out.println("S touto postavou nemuzes mluvit");
+        return false;
     }
 
     public boolean exit() {
